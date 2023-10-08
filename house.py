@@ -6,6 +6,8 @@
     Another test, after renaming. Let's see
 
     We started again here we go, again
+
+    Moved over the HW
 """
 
 class House:

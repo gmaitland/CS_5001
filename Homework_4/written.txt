@@ -1,0 +1,45 @@
+"""
+    Garfield Maitland
+    CS 5001
+    10/02/2023
+    Homework 4 - written.txt
+"""
+
+Written #1
+1A: Specifications
+IndexError
+
+Index 3 is of the list lst, is out of range.
+
+1B: Specifications
+TypeError
+
+Index 0 of the list lst if of type int. The list lst,
+is of type array. An array variable cannot be added to
+an int.
+
+
+1C: Specifications
+TypeError
+
+Index 1 of the list lst if of type int. "4" is of type string
+a type string variable cannot be added to a list of type
+int elements.
+
+
+Written #2
+2A: Specifications
+
+3
+4
+5
+8
+9
+10
+# Iterates and prints each element within the nested list
+
+2B: Specifications
+
+[3, 4, 5]
+[8, 9, 10]
+# Iterates over elements 0 and 1 of the list

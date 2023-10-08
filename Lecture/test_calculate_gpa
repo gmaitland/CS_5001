@@ -1,0 +1,20 @@
+"""
+    Test GPA - Night Edition
+
+"""
+
+import calc_gpa import
+
+def test_max3(one, two, three, expected): #unit test
+    """ test function for max3 """
+    actual = evening_max3.max3(one, two, three)
+    print(f"Inputs were {current_gpa}, {num_classes}, {new_grade}")
+    actual = calculate_gpa(current_gpa, num_classes, new_grade)
+    print(f"Expected Result: {expected} Actual Result: {actual}")
+
+def main():
+    test_calculate_gpa(0, 0, 3.5, 3.5)
+    test_calculate_gpa(4.0, 1, 4.0, 4.0)
+
+if __name__ == "__main__":
+    main()

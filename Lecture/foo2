@@ -1,0 +1,13 @@
+def foo(x):
+    """
+    return the value passed in plus 1, such that answer is x + 1
+    >>> foo(1)
+    2
+    >>> foo(2)
+    4
+    """
+    return x +1
+
+if __name__ == "__main__"
+    import doctest
+    doctest.testmod()

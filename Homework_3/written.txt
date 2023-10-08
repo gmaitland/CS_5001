@@ -1,0 +1,48 @@
+"""
+    Garfield Maitland
+    CS 5001
+    09/30/2023
+    Homework 3 - written.txt
+"""
+
+Written #1
+1A: Specifications
+# Not infinite
+# No error
+# Will print:
+Danger, Will Robinson!
+Danger, Will Robinson!
+Danger, Will Robinson!
+
+
+1B: Specifications
+# The while loop condition has not been met,
+# therefore the while loop will not run. However,
+# the second print statement should run.
+# Will print:
+Lost in Space!
+
+1C: Specifications
+# We will have an infinite loop
+# The level variable will always have a value
+# Less than the danger variable
+# Will print:
+Jupiter-2
+Jupiter-2
+Jupiter-2
+# When/if the infinite while loop were to end.
+# Then the program will exit the while loop and
+# Print line number 5 'Identify yourself, please'
+
+
+Written #2
+2A: Specifications
+# I think Option 1 will correctly prompt the user. The
+# way I reasoned was by thinking about the contrapositive.
+# 'If day is Sat or if day is Sun. Then that is a valid day'
+
+2B: Specifications
+# For the option that does not work, the problem is that the
+# program thinks that good inputs (like "Sat") are invalid.
+# This is because the condition of the while loop will always
+# be true.

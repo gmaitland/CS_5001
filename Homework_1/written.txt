@@ -1,0 +1,36 @@
+'''
+   CS5001
+   HW 1
+   Fall 2023
+   09/15/2023
+   Garfield Maitland
+'''
+
+Written #1
+
+What are the types of the following values?
+
+1A        50.1 # float
+
+1B         4 # int
+
+1C        -5.0 # float
+
+1D        "hello" # str
+
+1E        '15.5' # str
+
+
+Written #2
+
+What do the following expressions evaluate to?
+
+2A        7 / 5 # float division | prints 1.4  in Python 2 this would be int division
+
+2B        7.0 / 5.0 # float division | prints 1.4
+
+2C        7 // 5 # floor division | prints 1
+
+2D        7 % 5 # modulus | prints 2
+
+2E        1 ** 5 # exponentiation | prints 1

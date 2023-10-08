@@ -1,0 +1,43 @@
+'''
+   CS5001 09/23/2023
+   Garfield Maitland
+   HW 2
+'''
+
+Written #1
+
+1A - print_formatted(str())
+
+1B - get_max(int(x), int(y))
+
+1C - log_base_two(int())
+
+
+Written #2
+
+Line 3 will never execute because line 2, return x/y, return to the main function
+
+Written #3
+
+3A >>>19
+   >>>19
+
+3B >>>19
+   >>>18
+   >>>19
+
+Written #4
+
+Function #2 is inferior because it only prints, it doesn't save the value of sq.
+Function #1 is superior because it allows the function to be sent back to the caller which is likely the main() function.
+If I had to choose, I would choose Function #1.
+
+Written #5
+
+5A def divide(x, y)
+	return x/y
+
+(x: int, y: int) -> int:
+
+5B One benefit to using annotations for function definitions is that it helps future 'you', or another person understand your code.
+

@@ -1,0 +1,15 @@
+"""
+
+"""
+
+def max3(one, two, three): #solution code
+    """compare 3 inits, return the largest of the three"""
+    return max(max(one, two), three)
+
+def test_max3(one, two, three, expected): #unit test
+    actual = max3(one, two, three)
+    print(f"Inputs were {one}, {two}, {three}")
+    print(f"Expected: {expected} Actual Result: {actual}")
+
+if __name__ == "__main__"
+    main()

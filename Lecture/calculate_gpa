@@ -1,0 +1,15 @@
+"""
+    Calculate GPA: Night Edition
+
+"""
+
+def calculate_gpa(current_gpa, num_classes, new_grade):
+    """caluclate new gpa from current, # classes, and new grade """
+
+    total_gpa = current_gpa * num_classes
+    new_gpa = total_gpa + new_grade
+    final_gpa = new_gpa / (num_classes + 1)
+    return final_gpa
+
+if __name__ == "__main__"
+    main()
