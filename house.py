@@ -1,25 +1,5 @@
 """
-    I want to go and try updating the docstring for this project to see if it commits to git
-
-    I think it is working. Let's see if this small edit also pushes
-
-    Another test, after renaming. Let's see
-
-    We started again here we go, again
-
-    Moved over the HW
-
-    Moved over the rest of the files, but some tutoring files. Let's see
-
-    Says background tasks are being committed
-
-    I think I am going to close it
-
-    Now let's try again
-
-    Let's try to merge these files
-
-    renamed and deleted. Let's try again
+    I've done all the testing and integration. I believe it is functional now.
 """
 
 class House:
