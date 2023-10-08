@@ -12,6 +12,7 @@ IndexError
 
 Index 3 is of the list lst, is out of range.
 
+
 1B: Specifications
 TypeError
 
@@ -38,6 +39,7 @@ Written #2
 9
 10
 # Iterates and prints each element within the nested list
+
 
 2B: Specifications
 
