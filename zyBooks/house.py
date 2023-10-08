@@ -1,33 +1,20 @@
 """
-    I want to go and try updating the docstring for this project to see if it commits to git
-
-    I think it is working. Let's see if this small edit also pushes
-
-    Another test, after renaming. Let's see
-
-    We started again here we go, again
-
-    Moved over the HW
-
-    Moved over the rest of the files, but some tutoring files. Let's see
-
-    Says background tasks are being committed
-
-    I think I am going to close it
-
-    Now let's try again
-
-    Let's try to merge these files
+    Garfield Maitland
+    CS 5001
+    09/30/2023
+    Independent Project - house.py
 """
+
 
 class House:
     """A class that represents a house"""
+
     def __init__(self):
         self.bedrooms = 0
         self.kitchens = 0
         self.bathrooms = 0
 
-    def person_cooking(self, time): # In minutes
+    def person_cooking(self, time):  # In minutes
         """An instance method that represents a cooking function"""
         self.cooking_time = 0
         print(f'A person is cooking for {self.cooking_time} minutes')
@@ -55,3 +42,5 @@ my_house.person_cooking(5)
 my_house.person_showering(15)
 
 my_house.house_status()
+
+my_house2 = House()  # This will be the 2nd house

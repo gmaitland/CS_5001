@@ -1,0 +1,25 @@
+'''
+   CS5001
+   Optional Exercise - Reflecting on Your Values
+   Fall 2023 - 09/16/2023
+   Garfield Maitland
+'''
+
+
+'''
+
+Career - Discipline, Excellence, Focus
+
+My career is not just a job; it's a manifestation of my core values: discipline, excellence, and focus. These values have been instilled in me through various life experiences and mentors who have played a significant role in shaping my path.
+
+Discipline, the first core value, is a term I first encountered while running cross country track. In this physically demanding sport, I learned the importance of prioritizing tasks. The lesson was simple but profound: you must do what you need to do before you do what you want to do. It's the same in my career; there are tasks I may not always enjoy, but I understand that they are essential steps towards achieving my goals. Just like stretching before strength training, discipline ensures that I am adequately prepared for the challenges ahead.
+
+The second core value, excellence, is a principle I imbibed during my time in Air Force JROTC. It taught me the significance of always giving my best effort and taking pride in every task I undertake. In my career, I've carried this principle with me. I believe that mediocrity is the enemy of greatness. To build a stellar reputation and achieve true success, I consistently strive for excellence in everything I do.
+
+Focus, the third core value, is a concept I learned from the renowned self-help guru, Bob Proctor. Focus acts as the force that channels my energies and amplifies my results. In a world full of distractions, I've cultivated the ability to concentrate on my goals, milestones, and roadmaps for extended periods. This unwavering focus is the key to consistently achieving the outcomes I desire.
+
+My career is not just about personal success; it's about the positive impact I can have on others. Many people and communities depend on me, and I take that responsibility seriously. Success is not a mere aspiration; it's my unwavering objective. It's not just about personal achievement; it's about the ripple effect my success can create, inspiring others to embrace discipline, pursue excellence, and maintain unyielding focus in their own pursuits.
+
+In essence, my career is a testament to these core values, driving me forward in my journey to make a meaningful difference in the world.
+
+'''
