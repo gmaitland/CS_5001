@@ -8,6 +8,14 @@
     We started again here we go, again
 
     Moved over the HW
+
+    Moved over the rest of the files, but some tutoring files. Let's see
+
+    Says background tasks are being committed
+
+    I think I am going to close it
+
+    Now let's try again
 """
 
 class House:
