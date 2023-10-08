@@ -18,6 +18,8 @@
     Now let's try again
 
     Let's try to merge these files
+
+    renamed and deleted. Let's try again
 """
 
 class House:
