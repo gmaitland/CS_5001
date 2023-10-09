@@ -8,18 +8,18 @@
 
 def is_valid_upc(list_of_integers):
     """
-    Function:
-        Takes a list of run-length encoding (RLE) values and returns a list
-        containing the decoded values with the "runs" expanded.
+    Function: is_valid_upc()
+        Takes a list of integers and determines if that list of integers
+        can be evaluated as a upc number by checking its check digit
 
     Parameters:
-        list_of_integers, which is a possible UPC number
+        list_of_integers
 
     Preconditions:
-        None # Data
+        None
 
     Returns:
-        Boolean, indicating whether the given input is valid or not
+        is_valid
     """
     if (len(list_of_integers) < 2 or
             all(digit == 0 for digit in list_of_integers)):

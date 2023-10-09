@@ -10,18 +10,18 @@ import random
 
 def create_deck():
     """
-    Function:
-        Takes a list of run-length encoding (RLE) values and returns a list
-        containing the decoded values with the "runs" expanded.
+    Function: create_deck()
+        Creates a new deck of cards within the range 2 to 10, and
+        letters T, J, Q, K, A and within the suits c, d, h, and s.
 
     Parameters:
-        list_of_integers, which is a possible UPC number
+        None
 
     Preconditions:
-        None # Data
+        None
 
     Returns:
-        Boolean, indicating whether the given input is valid or not
+        List of cards (an array)
     """
     values = [str(i) for i in range(2, 10)] + ['T', 'J', 'Q', 'K', 'A']
     suits = ['c', 'd', 'h', 's']
@@ -33,18 +33,18 @@ def create_deck():
 
 def shuffle(cards):
     """
-    Function:
-        Takes a list of run-length encoding (RLE) values and returns a list
-        containing the decoded values with the "runs" expanded.
+    Function: shuffle()
+        Takes a list of cards, cards parameter, and shuffles it by utilizing
+        the built-in random module
 
     Parameters:
-        list_of_integers, which is a possible UPC number
+        cards
 
     Preconditions:
-        None # Data
+        None
 
     Returns:
-        Boolean, indicating whether the given input is valid or not
+        List of cards that represent the shuffled deck
     """
     shuffled_deck = random.sample(cards, len(cards))
     return shuffled_deck
@@ -52,18 +52,18 @@ def shuffle(cards):
 
 def deal(number_of_hands, number_of_cards, cards):
     """
-    Function:
-        Takes a list of run-length encoding (RLE) values and returns a list
-        containing the decoded values with the "runs" expanded.
+    Function: deal()
+        Creates a nested array that represents the number of players
+        and the number of cards per players from the array of cards
 
     Parameters:
-        list_of_integers, which is a possible UPC number
+        number_of_hands, number_of_cards, and cards
 
     Preconditions:
-        None # Data
+        None
 
     Returns:
-        Boolean, indicating whether the given input is valid or not
+        List of hands representing the number of cards in hands
     """
     hands = [[] for _ in range(number_of_hands)]
 

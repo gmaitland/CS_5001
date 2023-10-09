@@ -4,7 +4,8 @@
     10/02/2023
     Homework 4 - runlength_decoder.py
 """
-import hw4data  # Assuming hw4data.py is in the same directory
+import hw4data
+
 
 def decode(encoded_data):
     """
@@ -15,8 +16,11 @@ def decode(encoded_data):
     Parameters:
         encoded_data list: A list of RLE values [element, count].
 
+    Preconditions:
+        None
+
     Returns:
-        list: A list containing the decoded values.
+        A list containing all the decoded values
     """
     decoded_data = []
 
@@ -29,8 +33,8 @@ def decode(encoded_data):
 
     return decoded_data
 
+
 def main():
-    # Access DATA0, DATA1, DATA2, etc. from the hw4data module
     DATA0 = hw4data.DATA0
     DATA1 = hw4data.DATA1
     DATA2 = hw4data.DATA2
@@ -45,13 +49,13 @@ def main():
     decoded_data_4 = decode(DATA4)
     decoded_data_5 = decode(DATA5)
 
-    # Print the decoded data for each dataset
     print("Decoded Data 0:", decoded_data_0)
     print("Decoded Data 1:", decoded_data_1)
     print("Decoded Data 2:", decoded_data_2)
     print("Decoded Data 3:", decoded_data_3)
     print("Decoded Data 4:", decoded_data_4)
     print("Decoded Data 5:", decoded_data_5)
+
 
 if __name__ == "__main__":
     main()
