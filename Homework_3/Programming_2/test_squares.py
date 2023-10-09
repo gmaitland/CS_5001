@@ -40,7 +40,6 @@ def test_squares():
 
 
 def main():
-
     test_squares()
 
 

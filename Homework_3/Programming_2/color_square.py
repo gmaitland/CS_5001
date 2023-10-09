@@ -1,3 +1,10 @@
+"""
+    Garfield Maitland
+    CS 5001
+    09/30/2023
+    Homework 3 - color_square.py
+"""
+
 from chessboard import check_valid_row, check_valid_column
 
 BLACK = "BLACK"

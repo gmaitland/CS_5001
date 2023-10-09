@@ -5,8 +5,6 @@
     Homework 3 - chessboard.py
 """
 
-# from color_square import black_or_white
-
 
 def check_valid_row(row):
     """
@@ -55,39 +53,10 @@ def check_valid_column(column):
         print("Invalid column coordinate")
         return False
 
-"""
-# def check_valid_input(row, column):
-    
-    Function: check_valid_input()
-        Checks the user input to determine if it is a valid row and column
-        Calls the check_valid_row() and the check_valid_column() methods
-        Calls the black_or_white() method to determine BLACK or WHITE
-
-    Parameters:
-        row int: Is an int that represents the selected hex value.
-
-    Preconditions:
-        None
-
-    Returns:
-        None
-    
-    column = column.lower()
-    if check_valid_row(row) and check_valid_column(column):
-        square_color = black_or_white(row, column)
-        if square_color:
-            print(f"This is a valid {square_color} square")
-        else:
-            print("This is not a valid square")
-    else:
-        print("This is not a valid square")
-"""
-
 
 def main():
     row = int(input("What row? "))
-    column = input("What column? ").lower()  # Convert to lowercase
-    # check_valid_input(row, column)
+    column = input("What column? ").lower()
 
 
 if __name__ == "__main__":
