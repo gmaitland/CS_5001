@@ -2,7 +2,7 @@
     Garfield Maitland
     CS 5001
     10/10/2023
-    Tutoring - nested_nested_while_loops.py
+    Tutoring - nested_nested_while_loop.py
 """
 
 
