@@ -6,7 +6,7 @@ def main():
     i = 0 # reset i
     # iterate through the first level of multidimensional list
     while (i < len(list1)):
-        print(f'top level: {list1}')
+        print(f'\n\ntop level: {list1}')
         print('\nnext row')
         print(f'i: {i}') # print out row index
         print(f'list[i] = {list1[i]}')
