@@ -1,0 +1,60 @@
+list1 = [[1, 2, 3], [4, 5, 6]]
+element = list1[0][0] = 1
+
+list2 = [0,1,2,3,4,5]
+
+# need to define counter on outside
+i = 0
+while i < len(list2):
+	print(list2[i])
+	# increment the counter
+	i += 1 (i = i + 1)
+- initialize counter outside of while loop we are going to track with said counter
+- write conditional statement involving counter to exit the loop
+- manually increment the counter
+-------------
+len(list2) = 6
+i = 0
+-> print 0
+i = 1
+1 < 6
+-> print 1
+i = 2 < 6
+-> print 2
+
+----------------------------
+list1 = [[1, 2, 3], 
+			[4, 5, 6]]
+
+i = 0
+j = 0
+while()
+	# traverse each element of the list1
+	list1[0] = [1, 2, 3]
+	
+	while()
+		# traverse each element of list1[0]
+		print list1[][]
+
+while()
+	# traverses each element of list1, aka row of a 2d array
+	while()
+		traverses a "row" of list1
+-----------------------
+
+i = 0
+while(i < len(list)) #traverse each row of list1
+	operation(i) # this is the inner while loop 
+	i += 1
+	
+
+
+
+
+
+
+
+
+
+
+
