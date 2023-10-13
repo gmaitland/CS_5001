@@ -1,0 +1,28 @@
+"""
+    Garfield Maitland
+    CS 5001
+    10/12/2023
+    Homework 5 - ###
+"""
+
+
+Written #1
+1A: Specifications
+###
+
+
+1B: Specifications
+###
+
+
+1C: Specifications
+###
+
+
+Written #2
+2A: Specifications
+###
+
+
+2B: Specifications
+###

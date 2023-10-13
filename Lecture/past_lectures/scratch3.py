@@ -1,4 +1,4 @@
-from turtle import *
+import turtle
 
 g = turtle.Turtle()
 g.speed(5)
