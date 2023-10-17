@@ -12,7 +12,7 @@ x = acrostic_data.POEM.split("\n")
 y = x[0][0]
 
 z = []
-for i in range(len(x)):
+for i in range(len(x)): # Slightly pythonic | Similiar to for each
     if len(x[i]) < 1:
         print( end= " ")
     else:
@@ -26,9 +26,6 @@ a = " ".join(z)
 b = a.lower()
 
 print(b)
-
-_+
-
 
 
 

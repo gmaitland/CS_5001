@@ -22,7 +22,7 @@ def main():
         while (j < len(list1[i])):  # 2 not < 2
             print('inner loop')
             # print out "column" index (elements of a row)
-            print(f'j: {j}'
+            print(f'j: {j}')
             print(f'list[{i}][j] = {list1[i][j]}')
 
             k = 0  # reset k
