@@ -12,7 +12,7 @@ MAX_GUESS = 5
 
 def main():
     number = random.randint(1, 100)
-    player_name = str(input("Hi 😃! What is your name?"))
+    player_name = str(input("Hi 😃😃! What is your name?"))
     print(f"Welcome {player_name}! Let's get started.")
     print("I am thinking of a number between 1 and 100.")
     print(f"You have a maximum of {MAX_GUESS} guesses. Here we go. 3, 2, 1, begin!")
