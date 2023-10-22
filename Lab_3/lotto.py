@@ -43,4 +43,13 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(
+
+    import time
+
+    print("Starting...")
+    for i in range(5):
+        print(i, end='', flush=True)
+    time.sleep(1)
+    print("\nDone!")
+
