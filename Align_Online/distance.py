@@ -16,6 +16,9 @@ def euclidean(x1, y1, x2, y2):
     dist = (x_diff + y_diff) ** 0.5
     return dist
 
+
+"""
+
 def main():
     x1 = int(input())
     y1 = int(input())
@@ -26,6 +29,8 @@ def main():
 
 
 main()
+
+"""
 
 """
     We created 4 variables that prompt the user for 
