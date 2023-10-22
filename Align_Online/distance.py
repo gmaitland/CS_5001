@@ -6,10 +6,11 @@
 """
 
 def euclidean(x1, y1, x2, y2):
-    ''' Function euclidean
+    """
+        Function euclidean
         Parameters: four floats, representing two points
         Returns: a float, the distance between the two points
-    '''
+    """
     x_diff = (x2 - x1) ** 2
     y_diff = (y2 - y1) ** 2
     dist = (x_diff + y_diff) ** 0.5
@@ -26,3 +27,9 @@ def main():
 
 main()
 
+"""
+    We created 4 variables that prompt the user for 
+    assignment and then we mapped the euclidean function
+    return value to the dist variable. Then we print created
+    a print line to display the values to the console
+"""
