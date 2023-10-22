@@ -38,6 +38,11 @@ def calculate_tuition(total_tuition, scholarship_pct):
 
 def main():
     view_calendar()
+    view_class_schedule("MATH1241")
+    view_class_schedule("CS5001")
+    view_class_schedule("CS5002")
+
+"""
     view_calendar()
     view_calendar()
 
@@ -55,7 +60,7 @@ def main():
     left_to_pay = calculate_tuition(tuition, discount)
     
     print("You need to pay $", left_to_pay, sep = "")
-
+"""
     
 main()
 
