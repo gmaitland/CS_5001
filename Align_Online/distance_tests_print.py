@@ -38,10 +38,16 @@ def main():
     test_euclidean(0, 0, 1, 1, 1.414)
 
     # test 4
-    test_euclidean(-5.2, 3.8, 13.4, 0.2, 8.955)
+    test_euclidean(-5.2, 3.8, -13.4, 0.2, 8.955)
 
 main()
 
+
+"""
+    Moving forward, a way to improve would be to use a
+    conditional boolean statement to determine whether
+    or file and it's test cases pass
+"""
 
 
 
