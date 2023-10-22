@@ -33,7 +33,7 @@ def calculate_tuition(total_tuition, scholarship_pct):
         Parameters: two floats
         Returns: float
     '''
-    to_pay = total_tuition - total_tuition * scholarship_pct
+    to_pay = total_tuition - scholarship_pct
     return to_pay
 
 def main():
