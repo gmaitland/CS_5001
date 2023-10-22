@@ -27,6 +27,15 @@ def main():
 
 main()
 
+"""
+Created a function to convert stone weight to
+pounds. Then we had that function return the
+value which was assigned to the pounds variable
+to the function caller, which was main. The most
+complex portion of the code was the arithmetic
+that happened at line 19, and the function
+declaration which spans line 13 to line 20
+"""
 
 
 
