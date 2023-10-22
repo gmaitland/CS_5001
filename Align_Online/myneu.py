@@ -37,12 +37,12 @@ def calculate_tuition(total_tuition, scholarship_pct):
     return to_pay
 
 def main():
+    """
     view_calendar()
     view_class_schedule("MATH1241")
     view_class_schedule("CS5001")
     view_class_schedule("CS5002")
 
-"""
     view_calendar()
     view_calendar()
 
@@ -50,7 +50,7 @@ def main():
     print("...")
     view_class_schedule("CS5002")
     print("...")
-
+    """
     my_class = input("What class are you taking?\n").upper()
     print("here's your schedule...\n")
     view_class_schedule(my_class)
@@ -60,7 +60,17 @@ def main():
     left_to_pay = calculate_tuition(tuition, discount)
     
     print("You need to pay $", left_to_pay, sep = "")
-"""
     
 main()
 
+"""
+    We created multiple functions that we then called
+    from our main function. This allowed us to input
+    different types of arguments into the parameter
+    field, and observe the behavior and output. We did
+    this by prompting the user for input and then
+    we mapped the user input to the appropriate
+    value in our defined function. Our defined function
+    view_class_schedule was defined with conditional
+    if, elif and else conditional statements.
+"""
