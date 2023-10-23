@@ -20,6 +20,15 @@ def main():
         print(i)
     print("hey hey hey goodbye")
     print(i)
+# the for loop seems like it it easier to implement
 
 
+    i = 0
+    while i < 8:
+        print("na", end = " ")
+        i += 1
+    print("hey hey hey goodbye")
+
+# However the while loop appears to be more clean.
+# Personally, I prefer the while loop
 main()
