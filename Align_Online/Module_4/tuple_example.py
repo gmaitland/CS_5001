@@ -7,13 +7,9 @@
 
 """
     We are practicing creating tuples and observing their structure
-    and, attributes and properties
+    and, attributes and properties. We are also practicing how to use
+    a while loop
 """
-
-''' Align Online
-    CS5001
-    Sample code -- example of iterating over a tuple
-'''
 
 
 def main():
