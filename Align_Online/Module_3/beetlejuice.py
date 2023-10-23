@@ -24,4 +24,8 @@ def main():
 main()
 
 """"
-    We initialized our variable i, then we """
+    We initialized our variable i, then we created
+    a condition of i being greater than 0 in our
+    while loop. Created out print code block body.
+    Followed by creating our update statement.
+"""
