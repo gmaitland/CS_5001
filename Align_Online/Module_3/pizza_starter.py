@@ -26,3 +26,9 @@ def main():
         print("People can not be zero")
 
 main()
+
+
+"""
+    Used if and else conditional statement to create a 
+    boolean situation
+"""
