@@ -1,4 +1,11 @@
 """
+    CS 5001
+    10/22/2023
+    Align Online Module 3 - days_of_month.py
+    Garfield Maitland
+"""
+
+"""
 CS 5001: Intensive Foundations of Computer Science
 Module: Boolean Expressions & Conditionals
 Lesson 3-5: Logical Operators
