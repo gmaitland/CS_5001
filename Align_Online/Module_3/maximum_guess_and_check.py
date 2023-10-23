@@ -9,7 +9,8 @@
     This code implements the "Guess and Check" algorithm to find the maximum of
     the five numbers entered into the keyboard.  It "guesses" that the first number
     is the maximum and then "checks" each of the other four numbers against the
-    current guess correcting the guess as necessary.
+    current guess correcting the guess as necessary. This is a simple
+    algorithm, that check the value of an input.
 """
 
 
