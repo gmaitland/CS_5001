@@ -20,13 +20,13 @@ def main():
         print(i)
     print("hey hey hey goodbye")
     print(i)
-# the for loop seems like it it easier to implement
+# The for loop seems like it is easier to implement
 
 
-    i = 0
-    while i < 8:
+    i = 0 # initialization
+    while i < 8: # loop condition
         print("na", end = " ")
-        i += 1
+        i += 1 # loop update statement
     print("hey hey hey goodbye")
 
 # However the while loop appears to be more clean.
