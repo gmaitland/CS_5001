@@ -1,13 +1,16 @@
 """
-CS 5001: Intensive Foundations of Computer Science
-Module: Boolean Expressions & Conditionals
-Lesson 3-24 Multiway Conditionals
-
-This program prints exactly one message for a number between 1 and 5.
-
-This is the program we started with in Lesson 3-2.
+    CS 5001
+    10/23/2023
+    Align Online Module 3 - numbers_original.py
+    Garfield Maitland
 """
 
+
+"""
+    Our code prints the written word of a number between 1 and 5
+    inclusive of the numbers 1 and 5. We are using if, elif
+    and else 
+"""
 
 def main():
     number = int(input("Enter integer between 1 and 5 (inclusive)"))
