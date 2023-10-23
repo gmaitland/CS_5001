@@ -30,5 +30,5 @@ main()
 
 """
     Used if and else conditional statement to create a 
-    boolean situation
+    boolean situation 
 """
