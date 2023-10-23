@@ -18,9 +18,11 @@ def main():
     # get two integers from the user
     pizzas = int(input("How many pizzas did you order? "))
     people = int(input("How many people are there? "))
-    # multiply by 8 slices per pie and divide
-    slices = pizzas * 8 / people
-    print(pizzas, "pizzas split between", people, "can have", slices, "slices")
-
+    if people != 0:
+        # multiply by 8 slices per pie and divide
+        slices = pizzas * 8 / people
+        print(pizzas, "pizzas split between", people, "can have", slices, "slices")
+    else:
+        print("People can not be zero")
 
 main()
