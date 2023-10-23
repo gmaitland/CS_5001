@@ -7,8 +7,8 @@
 
 """
     This program prints exactly one message for a number between 1 and 5.
-    
-    This program has a logical error.
+    This program has a logical error. The error was found under the
+    assignment statement of 4
 """
 
 
@@ -23,7 +23,7 @@ def main():
     elif number == 3:
         answer = "three"
     elif number == 4:
-        amswer = "four"
+        answer = "four"
     elif number == 5:
         answer = "five"
 

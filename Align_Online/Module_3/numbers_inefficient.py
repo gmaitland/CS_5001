@@ -1,12 +1,17 @@
 """
-CS 5001: Intensive Foundations of Computer Science
-Module: Boolean Expressions & Conditionals
-Lesson 3-24 Multiway Conditionals
+    CS 5001
+    10/23/2023
+    Align Online Module 3 - numbers_inefficient.py
+    Garfield Maitland
+"""
 
-This program prints exactly one message for a number between 1 and 5.
-
-In this version of the program, the sequential if statements all must run
-one after the other making this a less efficient version of this example.
+"""
+    This program prints exactly one message for a number between 1 and 5.
+    
+    In this version of the program, the sequential if statements all must run
+    one after the other making this a less efficient version of this example.
+    
+This code is less efficient than a more efficient implementation.
 """
 
 

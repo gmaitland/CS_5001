@@ -1,18 +1,16 @@
 """
     CS 5001
     10/23/2023
-    Align Online Module 3 - maximum_efficient.py
+    Align Online Module 3 - maximum_inefficient.py
     Garfield Maitland
 """
 
 """
-Module: Boolean Expressions & Conditionals
-Lesson 3-6: Common Errors
-
-This code attempts to find the maximum of five values entered into the keyboard.
-It does this by checking each value against the other four values.
-
-There is an error in this code.  Can you find it?
+    This code attempts to find the maximum of five values entered into the keyboard.
+    It does this by checking each value against the other four values.
+    
+    There is an error in this code.  Can you find it?
+    Which part of the code is the error likely to be in?
 """
 
 
