@@ -1,9 +1,15 @@
-''' Align Online
-    CS5001
-    Sample code -- an example of how to print the elements of a matrix,
-    a list of lists
-'''
+"""
+    CS 5001
+    10/23/2023
+    Align Online Module 4 - matrix_print.py
+    Garfield Maitland
+"""
 
+"""
+    A matrix is a 2 dimensional array. This can be very useful
+    for certain applications. A matrix is also known as a list
+    of lists. 
+"""
 
 def main():
     grades = [
@@ -14,14 +20,14 @@ def main():
     print(grades)
 
     print("The grades are:")
-    row = 0
-    while row < len(grades):
-        col = 0
-        while col < len(grades[row]):
+    row = 0 # 1st counter initialization
+    while row < len(grades): # unknown list value, and conditional
+        col = 0 # 2nd counter initialization
+        while col < len(grades[row]): # conditional
             print(grades[row][col], end="\t")
-            col += 1
+            col += 1 # update statement
         print()
-        row += 1
+        row += 1 # update statement
     print("Done!")
 
 
