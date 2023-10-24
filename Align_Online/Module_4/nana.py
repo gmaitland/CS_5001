@@ -15,7 +15,7 @@
 """
 
 def main():
-    for i in range(8):
+    for i in range(5, 50, 2):
         print("na", end=" ")
         print(i)
     print("hey hey hey goodbye")

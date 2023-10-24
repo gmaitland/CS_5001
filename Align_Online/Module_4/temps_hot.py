@@ -1,7 +1,14 @@
-''' Align Online
-    CS5001
-    Sample code --- using a loop to count the hot days in a list
-'''
+"""
+    CS 5001
+    10/23/2023
+    Align Online Module 4 - temps_hot.py
+    Garfield Maitland
+"""
+
+"""
+    Using code to count the hot days in a list. 
+    
+"""
 
 HIGH_TEMPS = [92, 84, 98, 87, 94, 86, 75, 81, 91, 96, 75,
               74, 78, 78, 76, 79, 77, 91, 83, 77, 79, 74,
