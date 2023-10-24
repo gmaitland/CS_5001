@@ -12,7 +12,7 @@ from music import PLAYLIST, SONGS
 def substitute(song: list, old_word: str, new_word: str) -> bool:
     """
     Function: substitute()
-        Replaces the old word with the new word in the song. If the old word,
+        Replaces the old word with the neww word in the song. If the old word,
         is not in the song, then the function returns a boolean value false.
         Furthermore, the function strips the songs punctuation and updates
         the song list.
