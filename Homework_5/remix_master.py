@@ -106,7 +106,7 @@ def main():
         choice = input("Your choice: ").upper()
 
         if choice == 'L':
-            selection = int(input("Select a song by SONG # (1 for the first song, etc.): "))
+            selection = int(input("Select a song by SONG #: "))
             loaded = load_song(selection)
             if loaded:
                 current_song = loaded[0].copy()
@@ -121,7 +121,7 @@ def main():
                 print("No song loaded!")
 
         elif choice == 'S':
-            old_word = input("What word do you want to replace in the existing song? ")
+            old_word = input("What word do you want to replace in the song? ")
             new_word = input("What new word do you want to use for the song? ")
             if not substitute(current_song, old_word, new_word):
                 print(f"'The word {old_word}' is not found in the song!")
