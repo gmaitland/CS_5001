@@ -24,11 +24,14 @@ def main():
 
 
     i = 0 # initialization
-    while i < 8: # loop condition
-        print("na", end = " ")
-        i += 1 # loop update statement
+    while i < 80:  # loop condition
+        print("na", end=" ")
+        print(i)
+        i += 1  # loop update statement
     print("hey hey hey goodbye")
 
 # However the while loop appears to be more clean.
 # Personally, I prefer the while loop
+
+
 main()

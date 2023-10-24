@@ -2,27 +2,31 @@
     Garfield Maitland
     CS 5001
     10/12/2023
-    Homework 5 - ###
+    Homework 5 - written.txt
 """
 
 
 Written #1
 1A: Specifications
-###
-
+cocopuffscocopuffs
 
 1B: Specifications
-###
+cocopuffspuffs
 
 
 1C: Specifications
-###
+False
 
 
 Written #2
 2A: Specifications
-###
+result = s[-1::-3]
 
 
-2B: Specifications
-###
+Written #3
+3A: so 
+# String slicing begins inclusive and concludes exclusive
+
+3B: sox
+
+3C: sox
