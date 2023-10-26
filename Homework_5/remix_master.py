@@ -5,14 +5,12 @@
     Garfield Maitland
 """
 
-
 from music import PLAYLIST, SONGS
-
 
 def substitute(song: list, old_word: str, new_word: str) -> bool:
     """
     Function: substitute()
-        Replaces the old word with the neww word in the song. If the old word,
+        Replaces the old word with the new word in the song. If the old word,
         is not in the song, then the function returns a boolean value false.
         Furthermore, the function strips the songs punctuation and updates
         the song list.
@@ -27,18 +25,25 @@ def substitute(song: list, old_word: str, new_word: str) -> bool:
     Defense:
         None
     """
-    punctuation = ".?!:,"
-    song_str = " ".join(song)
+    punctuation = ".?!:;,"
+    song_str = "\n".join(song)
 
     if old_word not in song_str:
         return False
 
     song_str = song_str.replace(old_word, new_word)
+    '''
+    for i in old_word:
+        if i == new_word
+        new_word = old_word
+    # I's with space before and space after, and space before after
+    # for loop, split the whole string by words. if == then replace
+    '''
 
     for char in punctuation:
         song_str = song_str.replace(char, "")
 
-    song[:] = song_str.split()
+    song[:] = song_str.split("\n")
     return True
 
 
@@ -58,14 +63,21 @@ def reverse_it(song: list) -> list:
     Defense:
         None
     """
-    punctuation = ".?!:,"
+    punctuation = ".?!:;_,"
 
-    song_str = " ".join(song)
+    song_str = "\n".join(song)
     for char in punctuation:
         song_str = song_str.replace(char, "")
 
-    reversed_words = song_str.split()[::-1]
+    reversed_words = song_str.split("\n")
     song[:] = reversed_words
+    for i in range(len(reversed_words)):
+        current_line = reversed_words[i].split(" ")
+        current_line = current_line[::-1]
+        current_line = " ".join(current_line)
+        song[i] = current_line
+        # print(song)
+        # song = list(song)
     return song
 
 
@@ -130,7 +142,7 @@ def main():
             print(" ".join(current_song))
 
         elif choice == 'R':
-            reverse_it(current_song)
+            current_song = reverse_it(current_song)
 
         elif choice == 'X':
             current_song = loaded[0].copy()
