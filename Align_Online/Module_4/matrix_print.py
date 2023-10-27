@@ -23,10 +23,10 @@ def main():
     row = 0 # 1st counter initialization
     while row < len(grades): # unknown list value, and conditional
         col = 0 # 2nd counter initialization
-        while col < len(grades[row]): # conditional
+        while col < len(grades[row]): # conditional of the unknown list value
             print(grades[row][col], end="\t")
             col += 1 # update statement
-        print()
+        print("Almost done!")
         row += 1 # update statement
     print("Done!")
 
