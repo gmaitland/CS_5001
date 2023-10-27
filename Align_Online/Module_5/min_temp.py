@@ -44,6 +44,11 @@ print(f'The arithmetic total is {j}')
 a = j / len(HIGH_TEMPS)
 print(f'The average temperature is {int(a)}')
 
+x = "Now is the summer of our joy".split() # When you use the .split() method
+# Converts the string object into an array
+for w in "Now is the winter of our discontent".split():
+    print(x) # You can't use the .split() on an array
+
 
 
 main()
