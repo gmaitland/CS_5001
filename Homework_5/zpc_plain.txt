@@ -1,0 +1,72 @@
+We can go ahead and use any loop we like, and any list/string functions, in, split, join, index.
+
+Do This:
+
+Create a solution that allows users to:
+
+Substitute individual words of the song with a different word of the user’s choosing. 1. If the user tries to replace a word that does not exist, print an error message and do not change the song.
+2. Reverse the song so that the words (not letters!) are in the reverse order. 
+3. Playback the song
+4. Reset the song to the original version. Note that operations (a) and (b) above are persistent and the changes “stick” until you revert them. Therefore, you should be working with a COPY of the song as you’re remixing it.
+5. Load a new song from our playlist
+6. When requested, show the title of the song you’re currently remixing
+7. Continue the above operations on demand, until the user explicitly quits your program.
+8. Note that there is punctuation in some of the songs we've given you. When you remix a song, you should remove the punctuation (see the example reverse below). If you are unable to perform the remix, do NOT remove any punctuation - leave the song in its current state (see the last example below). Of course, if the song has already been altered, the "current state" has no punctuation anyway, so there's no punctuation alteration you would perform anyway.
+9. What punctuation are we talking about? For this assignment, consider it to mean these: .?!:,
+
+We will be performing both unit-testing on our solution AND some whole-system tests as well. For unit tests, we must provide the following three functions in remix_master.py:
+
+substitute(song: list, old_word: str, new_word: str ) -> bool:
+This function takes a song (which is a list containing multiple strings as the example above shows), an old word to replace and a new replacement word. It replaces every occurrence of the old word with the new word. If the replacement was successful (the old word was found and replaced) this function returns True, otherwise it returns False.
+Any punctuation existing in the song should be stripped out IF this operation is successful. If the operation is not successful, the original list should not be altered.
+NOTE: This function is destructive. It mutates the list passed in so your function must be sure to effect changes in the list.
+
+reverse_it(song: list) -> list
+This function takes a song (which is a list containing multiple strings) and reverses the song such that the words (not letters!) are in the reverse order (see requirement 2 above)
+NOTE: This function is destructive. Any punctuation existing in the song should be stripped out thereby mutating the list IF its operation is successful. If the operation is not successful, the original list should not be altered.
+
+load_song(selection: int) -> list
+This function takes an integer (which is an index into our playlist) and returns a list that contains the selected song AND a string which represents the song title from our playlist. For the list returned: the song must be placed in index 0 and the title must be placed in index 1. If the selection is not valid, this function returns an empty list.
+Important Note: This function is mapped to the user-centered selection operation, NOT our computer science index scheme. Therefore, load_song(1) retrieves the FIRST song in our playlist, not the second song.
+PRE: This function's input parameters must be integers. Input values are NOT guaranteed to be within the range of our playlist
+POST: If selection is found in the playlist, a list containing the song and the song title will be returned. Otherwise an empty list will be returned.
+
+
+During our testing of our solution, we will expand the playlist to more than onesong. Our solution should be flexible enough to handle any sized playlist that has at least 1 song in it.
+
+Focus on good procedural decomposition where each of our functions are short (<15 lines of code, discounting comments) and doing 1 thing well (NB: Our main() can be a bit longer than 15 lines, if our user menu is being handled there).
+No global variables (Global CONSTANTS are okay)
+
+Stretch-goal (let's try our best on this): Work to see if we can design our solution with a good "separation of concerns". See if we can construct our code for the user-interface to deal primarily with those aspects (e.g. getting input from the user and printing to the screen) and the other "business logic" to work without intermingling print statements, etc.
+
+What to submit:
+
+Our solution in a file named: remix_master.py
+Include any other .py files we've written for our “helper” functions we’ve written, if we've put them in separate files. Documentation/comments in remix_master.py should indicate any additional helper files we’ve included
+
+Let's also make a call to music.py, to pull the song data.
+
+---
+music.py
+
+PLAYLIST = ["Old MacDonald", "Row Your Boat", "Happy"]
+SONGS = [ ['old macdonald had a farm - ee-i-ee-i-o.',
+        'and on that farm he had a cow - ee-i-ee-i-o.',
+        'with a moo moo here and a moo moo there',
+        'here a moo - there a moo - everywhere a moo moo',
+        'old macdonald had a farm - ee-i-ee-i-o.' ],
+
+         ['row row row your boat',
+        'gently down the stream.',
+        'merrily merrily merrily merrily',
+        'life is but a dream' ],
+
+         ['huh, because i\'m happy',
+          'clap along if you feel like a room without a roof',
+          'because i\'m happy',
+          'clap along if you feel like happiness is the truth',
+          'because i\'m happy',
+          'clap along if you know what happiness is to you',
+          'because i\'m happy',
+          'clap along if you feel like that\'s what you wanna do']]
+
