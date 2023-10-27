@@ -34,4 +34,11 @@ for num in lst:
     print(num)
 # The lst is not mutated
 
+
+# s = "abcde"
+t = 0
+while t < len(s):
+    print(s[t])
+    t += 1
+
 main()

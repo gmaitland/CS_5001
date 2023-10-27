@@ -50,5 +50,16 @@ for w in "Now is the winter of our discontent".split():
     print(x) # You can't use the .split() on an array
 
 
+for z in "Mississippi".split("i"):
+    print(z)
+
+s = "abcde"
+for i in range(s):
+    print(i)
+
+print(type(j))
+print(type(z))
+print(type(a))
+
 
 main()
