@@ -15,5 +15,23 @@ def main():
         index += 1
 
 
+word = "fri-yay"
+for letter in word:
+    print(letter)
+
+lst = [4, 5, 6]
+for num in lst:
+    print(num)
+"""
+days = (mon, tue, wed, thurs, fri, sat, sun)
+for day in days:
+    print(day)
+"""
+
+lst = [3, 4, 5, 6, 7, 8, 9]
+for num in lst:
+    num = num + 10
+    print(num)
+# The lst is not mutated
 
 main()
