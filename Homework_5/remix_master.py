@@ -76,7 +76,7 @@ def reverse_it(song: list) -> list:
         current_line = current_line[::-1]
         current_line = " ".join(current_line)
         song[i] = current_line
-        # print(song)
+        print(song)
         # song = list(song)
     return song
 
