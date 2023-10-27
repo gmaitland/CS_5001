@@ -130,7 +130,7 @@ def main():
             if current_song:
                 print(f"The current song title is: {loaded[1]}")
             else:
-                print("No song loaded!")
+                print("No was song loaded!")
 
         elif choice == 'S':
             old_word = input("What word do you want to replace in the song? ")
