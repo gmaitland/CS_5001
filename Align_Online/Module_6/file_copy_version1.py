@@ -17,6 +17,8 @@ def main():
     content = input.read()
     input.close()
 
+
+
     input_2 = open("written.txt")
     content_2 = input_2.read()
     input_2.close()
