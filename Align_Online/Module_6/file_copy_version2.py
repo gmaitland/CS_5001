@@ -6,7 +6,7 @@
 """
 
 """
-Module: Handing Exceptions
+Module: Handling Exceptions
 
 This file implements copying the poems file and modifying the lines
 "Roses are red" to all upper-case.
