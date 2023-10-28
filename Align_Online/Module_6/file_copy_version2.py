@@ -39,7 +39,9 @@ def main():
 """
     I was able to read and write to a file. In other words I was able
     to manipulate data to complete a certain task outside of the
-    pycharm application; this is really exciting times.
+    pycharm application; this is really exciting times. Additionally
+    I implemented a try, except block of code, to help forgive,
+    user input
 """
 
 main()
