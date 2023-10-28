@@ -14,7 +14,13 @@
 
 empty_dictionary = {}
 
-# dictionary uses the {} curly brackets
+# dictionary uses the {} curly brackets, likely my favorite 1
+
+do_re_mi_0 = {"do": "doe, a deer, a female deer",
+              "re": "a drop of golden sun",
+              "mi": "a name I call myself",
+              "fa": "a long, long way to run"
+              }
 
 # Example uses the {} to delimit a list of key:value pairs
 do_re_mi_1 = {"do": "doe, a deer, a female deer",
