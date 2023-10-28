@@ -14,17 +14,20 @@ This file implements copying the poems file and modifying the lines
 
 
 def main():
-    input = open("poems.txt", "r")
-    output = open("poems-copy.txt", "w")
+    try:
+        input = open("poemss.txt", "r")
+        output = open("poems-copy.txt", "w")
 
-    for line in input:
-        if line.strip() == "Roses are red":
-            output.write(line.upper())
-        else:
-            output.write(line)
-    input.close()
-    output.close()
+        for line in input:
+            if line.strip() == "Roses are red":
+                output.write(line.upper())
+            else:
+                output.write(line)
+        input.close()
+        output.close()
 
+    except FileNotFoundError:
+        print("Sorry the file was not found")
 """
     for line in input:
         if line.strip() == "Roses are red":
@@ -38,4 +41,5 @@ def main():
     to manipulate data to complete a certain task outside of the
     pycharm application; this is really exciting times.
 """
+
 main()
