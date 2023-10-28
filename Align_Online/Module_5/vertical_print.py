@@ -36,7 +36,7 @@ for num in lst:
 
 
 # s = "abcde"
-s = input("Please enter a word:")
+s = input("Please enter a short word:")
 t = 0
 while t < len(s):
     print(s[t])
