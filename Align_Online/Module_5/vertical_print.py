@@ -68,5 +68,13 @@ for letter in a:
     finally the update statement to increment the index variable value, so that
     we can iterate to the next element within the list.
 """
-
+"""
+POEM = "Intensive technologies croon."
+DREAM = "Videos intersect"
+acrostics = [[POEM, 0], [DREAM, 3]]
+for each in acrostics:
+    print(each)
+    for element in acrostics[len(each)]:
+        print(acrostics[len(each)])
+"""
 main()
