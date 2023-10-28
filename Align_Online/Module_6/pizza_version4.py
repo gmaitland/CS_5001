@@ -6,14 +6,10 @@
 """
 
 """
-Module: Handing Exceptions
-
-This is the code that we are starting with in module 10.  Many changes 
-will be made to the code and there will be a couple of different version
-as we cover the material in this module.
-
-Version 4 include the validation of the parameters in get_slices, 
-and the handling of the errors raised in main
+    Module: Handing Exceptions
+    
+    Now we are using the try and except blocks of code in an effort to forgive,
+    the user of their error.
 """
 
 
@@ -44,10 +40,20 @@ def main():
         print(pizzas, "pizzas split", people,
               "ways is", slices, "slices each")
 
+    except:
+        print("Something went wrong. You goofed")
+
+
+
+
+
+
+"""
     except TypeError as ex:
         print("Invalid type:", type(ex), ex)
     except ValueError as ex:
         print("Invalid value:", type(ex), ex)
+"""
 
 
 

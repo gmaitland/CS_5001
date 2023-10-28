@@ -22,13 +22,15 @@ def get_slices(pies, folks):
         Returns:  the number of slices per person
     """
     if pies <= 0:
-        raise ValueError("ValueError, you big dummy \n"
+        raise ValueError("You big dummy \n"
                          "You can't have negative pizzas \n"
-                         "unless you expect people to bring their \n"
-                         "own pizza.")
-    if folks <= 0:
-        raise ValueError("ValueError, you big dummy \n"
+                         "Unless you expect people to bring their \n"
+                         "Own pizza.")
+    if not isinstance(folks, int) or folks <= 0:
+        raise ValueError("You big dummy \n"
                          "Folks, should be greater than 0")
+    if not isinstance(pies, int):
+        raise TypeError("pies must be an integer")
     """
         if folks != 0:
         slices = pies * 8 // folks
