@@ -21,6 +21,9 @@ def get_slices(pies, folks):
                   folks, the number of people
         Returns:  the number of slices per person
     """
+    if folks <= 0:
+        raise ValueError("ValueError, you big dummy \n"
+                         "Folks, should be greater than 0")
     if folks != 0:
         slices = pies * 8 // folks
         return slices
