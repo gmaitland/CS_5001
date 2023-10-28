@@ -40,8 +40,11 @@ def main():
         print(pizzas, "pizzas split", people,
               "ways is", slices, "slices each")
 
-    except:
-        print("Something went wrong. You goofed")
+    except TypeError as ex:
+        print("Invalid type:", ex)
+    except ValueError as ex:
+        print("Something went wrong. You goofed", ex)
+
 
 
 
