@@ -5,10 +5,8 @@
     Garfield Maitland
 """
 
-''' Align Online
-    CS5001
-    Sample code for Module 11: Dictionaries and Sets 
-    
+''' 
+    Didn't cover the implementation of sets in the modules. But there was a video on them
     Three examples for creating the same do_re_mi dictionaries in PythonDo-Re-Mi example of using Dictionaries in Python
 '''
 
