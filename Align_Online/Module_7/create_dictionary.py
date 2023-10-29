@@ -39,3 +39,5 @@ do_re_mi_3 = dict([["do", "doe, a deer, a female deer"],
                    ["re", "a drop of golden sun"],
                    ["mi", "a name I call myself"],
                    ["fa", "a long, long way to run"]])
+
+# dictionary.items() variable name of the dictionary and then the .items() method
