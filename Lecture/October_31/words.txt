@@ -1,0 +1,3 @@
+hello, bonjour, hola
+goodbye, au revior, adios
+thank you, merci, gracias
