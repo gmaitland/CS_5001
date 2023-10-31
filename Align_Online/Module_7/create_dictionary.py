@@ -29,9 +29,27 @@
 """
 
 # Demonstrate for loop
+letters = "abcde"
+for letter in letters:
+    print(letter)
 
+# Demonstrate while loop
+letters = "abcde"
+i = 0
+while i < len(letters):
+    print(letters[i])
+    i += 1
 
-
+# Demonstrate nested while loop
+important = ["sleep", "diet", "exercise"]
+i = 0
+while i < len(important):
+    print(important[i])
+    j = 0
+    while j < len(important[i]):
+        print(important[i][j])
+        j += 1
+    i += 1
 
 
 empty_dictionary = {}
