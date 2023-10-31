@@ -81,6 +81,8 @@ def swap_them(a_list):
     return a_list
 
 
+
+
 # 12
 def resequencing(a_list):
     """
