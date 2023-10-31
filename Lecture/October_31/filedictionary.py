@@ -11,3 +11,7 @@ def load_dictionary(file_name):
 
         for each in_file:
             each = each.strip("\n")
+            english, french, spanish = each.split(",")
+            logos[english] = [french, spanish]
+
+        return logos
