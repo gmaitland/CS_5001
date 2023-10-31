@@ -10,6 +10,30 @@
     Three examples for creating the same do_re_mi dictionaries in PythonDo-Re-Mi example of using Dictionaries in Python
 '''
 
+"""
+    Recall that the way a python program executes is from the bottom up.
+    That mean's it starts with the line 'main()' and thus calls the
+    def main(): function. After that, it executes what is in the main
+    function line by line. It also jumps to other modules and helper
+    functions when appropriate. 
+    
+    Separately, the way we iterate over content is with the for loop
+    and the while loop. The for loop typically requires about 3 lines of
+    code. They are the list of items, the conditional statement, and the
+    print statement.
+    
+    The while loop typically requires about 5 lines of code. The list 
+    of items, the update variable, the conditional statement, the
+    print statement, and the variable update statement. Let's 
+    demonstrate.
+"""
+
+# Demonstrate for loop
+
+
+
+
+
 empty_dictionary = {}
 
 # dictionary uses the {} curly brackets, likely my favorite 1
