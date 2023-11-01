@@ -7,6 +7,7 @@
 
 # What ticker symbol do you want?
 # Bring back stock price to the user
+# Sets do not allow for duplicates
 
 def test_stocks():
     stocks = {"IBM": "$140",
@@ -19,9 +20,9 @@ def test_stocks():
         if stock == ":Q:":
             break
         if stock in stocks:
-            print(f"The stock and the stock price is {stocks[stock]}")
+            print(f"The stock {stock} has a stock price of {stocks[stock]}")
         else:
-            print(f"This stock and value for {stock} does not exist")
+            print(f"The stock {stock} does not exist")
 
 
 def main():
