@@ -5,6 +5,8 @@
     Lecture - filedictionary.py
 """
 
+# Can do localization of code, it is a common thing to do
+
 def load_dictionary(file_name):
     with open(file_name, mode="r") as in_file:
         logos = {}
