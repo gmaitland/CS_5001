@@ -7,16 +7,18 @@
 
 # Can do localization of code, it is a common thing to do
 
+dict_1 = {"a": "letter", "1": "number", "'": "punctuation"}
 '''
 for stuff in dict:
     print(stuff)
 '''
+dict_1_for_while_loop = list(dict_1.items())
 
-dict = {"a": "letter", "1": "number", "'": "punctuation"}
 i = 0
-while i < len(dict):
-    print(dict[i])
+while i < len(dict_1_for_while_loop):
+    print(dict_1_for_while_loop[i])
     i += 1
+
 
 def load_dictionary(file_name):
     with open(file_name, mode="r") as in_file:
