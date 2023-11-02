@@ -7,6 +7,17 @@
 
 # Can do localization of code, it is a common thing to do
 
+'''
+for stuff in dict:
+    print(stuff)
+'''
+
+dict = {"a": "letter", "1": "number", "'": "punctuation"}
+i = 2
+while i < len(dict):
+    print(dict[i])
+    i += 1
+
 def load_dictionary(file_name):
     with open(file_name, mode="r") as in_file:
         logos = {}
@@ -30,6 +41,7 @@ def test_file_dictionary():
 
 def main():
     test_file_dictionary()
+
 
 if __name__ == "__main__":
     main()
