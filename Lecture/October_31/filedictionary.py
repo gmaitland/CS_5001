@@ -13,7 +13,7 @@ for stuff in dict:
 '''
 
 dict = {"a": "letter", "1": "number", "'": "punctuation"}
-i = 2
+i = 0
 while i < len(dict):
     print(dict[i])
     i += 1
