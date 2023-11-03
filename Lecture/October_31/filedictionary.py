@@ -19,6 +19,15 @@ while i < len(dict_1_for_while_loop):
     print(dict_1_for_while_loop[i])
     i += 1
 
+new_list = ["I work hard", "I do my best", "This is what we do"]
+"""
+for phrases in new_list:
+    print(new_list[phrases])
+ """
+phrases = 0
+while phrases < len(new_list):
+    print(new_list[phrases])
+    phrases += 1
 
 def load_dictionary(file_name):
     with open(file_name, mode="r") as in_file:
