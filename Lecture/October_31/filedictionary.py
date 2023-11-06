@@ -28,7 +28,10 @@ phrases = 0
 while phrases < len(new_list):
     print(new_list[phrases])
     phrases += 2
-    phrases = 1
+    # phrases = 1
+
+for items in range(2, 100, 5):
+    print(items)
 
 def load_dictionary(file_name):
     with open(file_name, mode="r") as in_file:
