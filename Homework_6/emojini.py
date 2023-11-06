@@ -74,7 +74,11 @@ def batch_translate(emoji_file_name, directives_file_name):
         print(f"An unexpected error occurred: {e}")
 
 
-if __name__ == "__main__":
+def main():
     # Example of running batch_translate with the provided files.
     # In practice, you might want to accept these as command-line arguments or from user input.
     batch_translate('emojis.txt', 'emoji_directives.txt')
+
+
+if __name__ == "__main__":
+    main()
