@@ -5,80 +5,71 @@
     Garfield Maitland
 """
 
-import re
+
+def read_emoji_file(file_name):
+    with open(file_name, 'r') as file:
+        lines = file.readlines()
+
+    metadata = lines[0].strip().split()
+    emoji_dict = {metadata[i]: {} for i in range(1, len(metadata))}
+    for line in lines[1:]:
+        parts = line.strip().split()
+        for i in range(1, len(metadata)):
+            emoji_dict[metadata[i]][parts[0]] = parts[i]
+    return emoji_dict
 
 
-def parse_emoji_file(emoji_file_name):
-    with open(emoji_file_name, 'r', encoding='utf-8') as file:
-        headers = file.readline().strip().split('\t')
-        emoji_map = {header: {} for header in headers[1:]}  # skip METADATA
+def translate_line(line, word_dict):
+    translated_line = ''
+    word_start = 0
 
-        for line in file:
-            data = line.strip().split('\t')
-            for i, header in enumerate(headers[1:], 1):  # skip METADATA
-                emoji_map[header][data[0].lower()] = data[i]
+    for i, char in enumerate(line):
+        if char in ' \n\t.,!?()"-':
+            if word_start < i:
+                word = line[word_start:i]
+                translated_line += word_dict.get(word, word)
+            translated_line += char
+            word_start = i + 1
 
-    return emoji_map
+    # Add the last word if the line doesn't end with a punctuation mark
+    if word_start < len(line):
+        word = line[word_start:]
+        translated_line += word_dict.get(word, word)
 
-
-def read_directive_file(directives_file_name):
-    with open(directives_file_name, 'r', encoding='utf-8') as file:
-        directives = [line.strip().split() for line in file]
-    return directives
-
-
-def transform_text(mapping, text, direction):
-    words = text.split()
-    transformed_words = []
-
-    for word in words:
-        # Retain punctuation
-        base_word = re.sub(r'[\W_]', '', word)
-        punctuation = re.sub(r'\w', '', word)
-        key = base_word.lower()
-
-        if direction == 'english':
-            transformed_word = mapping.get(key, base_word)
-        else:  # assume direction is either 'western' or 'kaomoji'
-            reverse_map = {v: k for k, v in mapping.items()}
-            transformed_word = reverse_map.get(key, base_word)
-
-        transformed_words.append(transformed_word + punctuation)
-
-    return ' '.join(transformed_words)
-
-
-def write_output_file(output_file_name, transformed_text):
-    with open(output_file_name, 'w', encoding='utf-8') as file:
-        file.write(transformed_text)
+    return translated_line
 
 
 def batch_translate(emoji_file_name, directives_file_name):
+    emoji_dict = read_emoji_file(emoji_file_name)
+
     try:
-        emoji_map = parse_emoji_file(emoji_file_name)
-        directives = read_directive_file(directives_file_name)
+        with open(directives_file_name, 'r') as directives_file:
+            for line in directives_file:
+                source_lang, target_lang, source_file_name, target_file_name = line.strip().split()
 
-        for directive in directives:
-            source_lang, target_lang, input_file, output_file = directive
-            with open(input_file, 'r', encoding='utf-8') as file:
-                text = file.read()
+                # Depending on the direction of translation, the word dictionary may differ
+                if source_lang != 'english':
+                    word_dict = {v: k for k, v in emoji_dict[source_lang].items()}
+                else:
+                    word_dict = emoji_dict[target_lang]
 
-            mapping = emoji_map[target_lang.upper()] if target_lang != 'english' else emoji_map[source_lang.upper()]
-            transformed_text = transform_text(mapping, text, source_lang)
-            write_output_file(output_file, transformed_text)
+                try:
+                    with open(source_file_name, 'r') as source_file, open(target_file_name, 'w') as target_file:
+                        for line in source_file:
+                            translated_line = translate_line(line, word_dict)
+                            target_file.write(translated_line)
+                except FileNotFoundError:
+                    print(f"Error: The file {source_file_name} does not exist.")
+                except Exception as e:
+                    print(f"An error occurred while processing the file {source_file_name}: {e}")
 
-        print('Processing completed.')
-    except FileNotFoundError as e:
-        print(f"Error: The file {e.filename} was not found.")
+                print(f"Processing {source_file_name}: {source_lang} -> {target_lang}")
+    except FileNotFoundError:
+        print(f"Error: The directives file {directives_file_name} does not exist.")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        print(f"An error occurred while reading the directives file: {e}")
 
+    print("done")
 
-def main():
-    # Example of running batch_translate with the provided files.
-    # In practice, you might want to accept these as command-line arguments or from user input.
-    batch_translate('emojis.txt', 'emoji_directives.txt')
-
-
-if __name__ == "__main__":
-    main()
+# To use the function, simply call it with the names of your emoji and directives files:
+# batch_translate('emojis.txt', 'emoji_directives.txt')
