@@ -5,6 +5,7 @@
     Garfield Maitland
 """
 
+
 def read_emoji_file(file_name: str):
     emoji_dict = {'english_to_western': {},
                   'english_to_kaomoji': {},
@@ -22,10 +23,10 @@ def read_emoji_file(file_name: str):
                 english, western, kaomoji = parts
                 emoji_dict['english_to_western'][english.lower()] = western
                 emoji_dict['english_to_kaomoji'][english.lower()] = kaomoji
-                emoji_dict['kaomoji_to_english'][kaomoji] = english
-                emoji_dict['kaomoji_to_western'][kaomoji] = western
-                emoji_dict['western_to_english'][western] = english
-                emoji_dict['western_to_kaomoji'][western] = kaomoji
+                emoji_dict['kaomoji_to_english'][kaomoji.lower()] = english
+                emoji_dict['kaomoji_to_western'][kaomoji.lower()] = western
+                emoji_dict['western_to_english'][western.lower()] = english
+                emoji_dict['western_to_kaomoji'][western.lower()] = kaomoji
     return emoji_dict
 
 
@@ -43,10 +44,10 @@ def parse_directives_file(file_name: str):
                 instructions.append(instruction)
     return instructions
 
+
 def translate_text(source_text: str, emoji_dict: dict, mode: str):
     words = source_text.split()
     translated_words = []
-
     # print(emoji_dict)
     for word in words:
         word_cleaned, prefix, suffix = strip_punctuation(word)
@@ -58,7 +59,7 @@ def translate_text(source_text: str, emoji_dict: dict, mode: str):
         translated_words.append(translated_word)
 
     return ' '.join(translated_words)
- # Word may not be getting identified.
+    # Word may not be getting identified.
 def strip_punctuation(word: str):
     prefix, suffix = '', ''
     while word and not word[0].isalnum():

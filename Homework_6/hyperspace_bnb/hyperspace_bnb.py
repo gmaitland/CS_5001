@@ -20,7 +20,7 @@ def load_travelers(travelers_file_name: str):
         travelers
 
     Defense:
-        try / except blocks
+        try / except block
     """
     travelers = {}
     try:
