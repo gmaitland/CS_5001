@@ -1,3 +1,10 @@
+"""
+    CS 5001
+    11/06/2023
+    Homework 6 - emojini.py
+    Garfield Maitland
+"""
+
 def read_emoji_file(file_name: str):
     emoji_dict = {'english_to_western': {},
                   'english_to_kaomoji': {},
@@ -8,9 +15,10 @@ def read_emoji_file(file_name: str):
                   }
     with open(file_name, 'r', encoding='utf-8') as file:
         next(file)  # Skip the metadata header
+        # Each line will have english, western, kaomoji
         for line in file:
             parts = line.strip().split()
-            if len(parts) == 4:
+            if len(parts) == 3:
                 emoji_dict['english_to_western'][parts[1].lower()] = parts[2]
                 emoji_dict['english_to_kaomoji'][parts[1].lower()] = parts[3]
                 emoji_dict['kaomoji_to_english'][parts[3]] = parts[1]
@@ -22,7 +30,7 @@ def parse_directives_file(file_name: str):
     with open(file_name, 'r', encoding='utf-8') as file:
         for line in file:
             parts = line.strip().split()
-            if len(parts) == 4:
+            if len(parts) == 3:
                 instruction = {
                     'mode': f"{parts[0]}_to_{parts[1]}",
                     'source_file': parts[2],
@@ -35,8 +43,10 @@ def translate_text(source_text: str, emoji_dict: dict, mode: str):
     words = source_text.split()
     translated_words = []
 
+    print(emoji_dict)
     for word in words:
         word_cleaned, prefix, suffix = strip_punctuation(word)
+        # print(word_cleaned)
         if word_cleaned.lower() in emoji_dict[mode]:
             translated_word = prefix + emoji_dict[mode][word_cleaned.lower()] + suffix
         else:
@@ -44,7 +54,7 @@ def translate_text(source_text: str, emoji_dict: dict, mode: str):
         translated_words.append(translated_word)
 
     return ' '.join(translated_words)
-
+ # Word may not be getting identified.
 def strip_punctuation(word: str):
     prefix, suffix = '', ''
     while word and not word[0].isalnum():
