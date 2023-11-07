@@ -4,6 +4,8 @@
     Homework 6 - hyperspace_bnb.py
     Garfield Maitland
 """
+
+
 def load_travelers(travelers_file_name: str):
     """
     Function: load_travelers()
@@ -38,6 +40,7 @@ def load_travelers(travelers_file_name: str):
         print(f"The file {travelers_file_name} does not exist. Please check the filename and try again.")
         return None
     return travelers
+
 
 def process_requests(travelers, request_file_name: str):
     """
