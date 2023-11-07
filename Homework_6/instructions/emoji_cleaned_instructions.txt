@@ -1,0 +1,115 @@
+You are an expert python software engineer.
+
+Take a deep breath. Thoroughly build this program, step, by step and reflect on each step. This is important to my career. Ready?
+
+---
+
+Remember. If you have any questions. Please ask. Are you ready?
+
+
+--
+
+For this program, we'll be implementing a simple text transformation solution that substitutes English words into their appropriate text-based emojis.
+
+Given Files:
+
+emoji_directives.txt emojis.txt recommendation_letter_k.txt recommendation_letter.txt
+ 
+
+Task Overview:
+We will be creating a solution to transform existing text into their text-based emoji representations, and vice versa. We are providing a text file with the mapping between English and the emoji character set we are to use for this assignment. Our emoji file uses metadata, so we will need to design our solution to handle that style of data representation. We will not strip punctuation.
+
+Let's remember some key things:
+
+Do not hardcode our solution based on the current file. We will use different directives files and different emoji font files during external testing. Let's avoid regular expressions. Do not forget to handle any file exceptions using Python’s exception handling mechanism (try/except) and/or through the use of "defensive programming". We may "accidentally" provide a locked or non-existent file to process in our directives.txt. Our code should be able to handle that situation gracefully
+
+Remember, we need to map, parse, create a new list, and transform the dictionary mapped values into the new list/ file
+
+Note: For this assignment, the first line in the data file is metadata. It describes the columns of data provided. Our program should be flexible enough to work EVEN IF WE GIVE AN ALTERNATE FILE with similar data, as long as the metadata is present.
+
+The metadata line look like this: METADATA      ENGLISH       WESTERN      KAOMOJI
+
+
+Design and write the following function:
+As part of our solution, we must provide the following function:
+
+batch_translate(emoji_file_name: str, directives_file_name: str)
+
+This function takes two strings: 
+(1) the name of the emoji mapping file (we've been given one with emojis.txt) and 
+(2) a directives file which gives instructions for the type of transformation to run, and then orchestrates the process of converting the text as specified. Our auto-test suite will call this function to test your solution, so whatever process needs to be initiated to perform the text transformation should be performed when this function is called.
+
+Do this:
+
+Write a program that translates English words to their Western or Kaomoji equivalents. Use the given emojis.txt as the basis for your translation. This is whole-word replacement. We should NOT be stripping punctuation from your finished transformation. We'll be using your transformation program as an automated responder to text messages and to create form letters (think mail-merge) and we need to retain the original punctuation in those messages.
+Your program does not require any user interface. Your output must be written to files. Print lines to the console are appreciated to indicate that your file processing has completed, or that you've handled an exception of some type.
+
+For example, here is a print to console output after processing the directives file:
+
+---
+Homework/HW6/emojini/emojini.py
+Processing recommendation_letter.txt: english -> western Processing recommendation_letter.txt: english -> kaomoji
+Processing recommendation_letter_k.txt: kaomoji -> english
+done
+>>>
+---
+
+Our program must read from a text file that gives instructions on the emoji substitution required, the input file to use as the source information AND the output file you should generate for your output. We've included one called emoji_directives.txt but your program should be able to handle ANY file we pass it when we call the appropriate function.
+For example, the emoji_directives.txt starter file given gives you the transformations you must process in sequence. In one case we are asking for a transformation from English to kaomoji for recommendation_letter.txt. The source file: recommendation_letter.txt is given to you as a starter file. Your code must produce the output file recommendation_letter_k.txt
+
+---
+recommendation_letter.txt
+To whom it may concern,
+I am happy to present this cool recommendation for my CS5001 class.
+I am embarrassed and worried that I would not reach you in time.
+I think my brother's cat made me sick again. Almost like the "dog ate my homework" (you can Almost see me wink at you now!)
+Anyway, this is a fine group of students. It does my heart good to see them progress so fast!
+I am happy to provide any details as you need them.
+Best,
+Dr. Bagley
+---
+
+Output file after transformation is performed
+
+---
+recommendation_letter_k.txt
+To whom it may concern,
+I am ^_^ to present this ╰(▔∀▔)╯ recommendation for my CS5001 class.
+I am (#^.^#) and (-"-) that I would not reach you in time.
+I think my brother's =^._.^=∫ made me `(๑△๑)`* again. Almost like the "dog ate my homework" (you can Almost
+see me (^_-) at you now!)
+Anyway, this is a fine group of students. It does my (*♡▽♡*) good to see them progress so fast!
+I am ^_^ to provide any details as you need them.
+Best,
+Dr. Bagley
+---
+
+---
+emojis.txt
+METADATA 		ENGLISH  WESTERN 	KAOMOJI
+Happy 		  :‑)   	     ^_^
+Laugh 		  :‑D 		     >^_^<
+Angry 		  :‑( 		     (>_<)
+Confused 		:-/ 		     (°.°)
+Crying 		  :'(		       ('_')
+ROTFL 		  :') 		     (^_^)v
+Disgusted		D:< 		     (*￣m￣)
+Embarrassed		:$ 		     (#^.^#)
+Sick			  :‑###   	  `(๑△๑)`*
+Cool 			  |;‑) 		     ╰(▔∀▔)╯
+Wink 			  ;‑)  		     (^_-)
+Innocent 		O:) 		     (^j^)
+Worried 		:E   		     (-"-)
+Surprised 	:‑O   	     (o.o)
+Evil 			  }:‑)  	     (•̀ᴗ•́)و^
+Heart 		  <3 		       (*♡▽♡*)
+Heartbroken	<\3 		 (●´□`)♡
+Cat 			 =ʘᆽʘ=∫  	     =^._.^=∫
+---
+
+---
+emoji_directives.txt
+english western recommendation_letter.txt recommendation_letter_w.txt
+english kaomoji recommendation_letter.txt recommendation_letter_k.txt
+kaomoji english recommendation_letter_k_orig.txt newletter.txt
+---
