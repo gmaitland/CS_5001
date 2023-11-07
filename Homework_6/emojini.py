@@ -19,18 +19,22 @@ def read_emoji_file(file_name: str):
         for line in file:
             parts = line.strip().split()
             if len(parts) == 3:
-                emoji_dict['english_to_western'][parts[1].lower()] = parts[2]
-                emoji_dict['english_to_kaomoji'][parts[1].lower()] = parts[3]
-                emoji_dict['kaomoji_to_english'][parts[3]] = parts[1]
-                emoji_dict['western_to_english'][parts[2]] = parts[1]
+                english, western, kaomoji = parts
+                emoji_dict['english_to_western'][english.lower()] = western
+                emoji_dict['english_to_kaomoji'][english.lower()] = kaomoji
+                emoji_dict['kaomoji_to_english'][kaomoji] = english
+                emoji_dict['kaomoji_to_western'][kaomoji] = western
+                emoji_dict['western_to_english'][western] = english
+                emoji_dict['western_to_kaomoji'][western] = kaomoji
     return emoji_dict
+
 
 def parse_directives_file(file_name: str):
     instructions = []
     with open(file_name, 'r', encoding='utf-8') as file:
         for line in file:
             parts = line.strip().split()
-            if len(parts) == 3:
+            if len(parts) == 4:
                 instruction = {
                     'mode': f"{parts[0]}_to_{parts[1]}",
                     'source_file': parts[2],
@@ -43,7 +47,7 @@ def translate_text(source_text: str, emoji_dict: dict, mode: str):
     words = source_text.split()
     translated_words = []
 
-    print(emoji_dict)
+    # print(emoji_dict)
     for word in words:
         word_cleaned, prefix, suffix = strip_punctuation(word)
         # print(word_cleaned)
