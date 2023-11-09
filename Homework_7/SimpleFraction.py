@@ -66,7 +66,8 @@ class SimpleFraction:
             self.validate(other, 1)  # Ensure it's a valid integer
             return SimpleFraction(self.numerator, self.denominator * other)
         else:
-            raise ValueError("Can only divide by another SimpleFraction or an integer")
+            raise ValueError("Can only divide by another"
+                             " SimpleFraction or an integer")
 
     def __str__(self):
         return f"{self.numerator}/{self.denominator}"
