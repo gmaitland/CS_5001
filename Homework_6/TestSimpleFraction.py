@@ -1,7 +1,29 @@
+"""
+    CS 5001
+    11/08/2023
+    Homework 7 - TestSimpleFraction.py
+    Garfield Maitland
+"""
+
 import unittest
 from SimpleFraction import SimpleFraction
 
+
 class TestSimpleFraction(unittest.TestCase):
+    """
+    Class: TestSimpleFraction
+        Allows for the testing of the
+        SimpleFraction program
+
+    Parameters:
+        none
+
+    Returns:
+        none
+
+    Defense:
+        none
+    """
 
     def test_default_constructor(self):
         fraction = SimpleFraction()
@@ -64,6 +86,6 @@ class TestSimpleFraction(unittest.TestCase):
         self.assertTrue(fraction1 == fraction2)
         self.assertFalse(fraction1 == fraction3)
 
-# This allows the test to be run from the command line
+
 if __name__ == '__main__':
     unittest.main()
