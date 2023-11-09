@@ -5,6 +5,7 @@
     Garfield Maitland
 """
 
+
 class SimpleFraction:
     """
     Class: SimpleFraction
@@ -19,6 +20,7 @@ class SimpleFraction:
     Defense:
         none
     """
+
     def __init__(self, numerator=1, denominator=1):
         self.validate(numerator, denominator)
         self.numerator = numerator
