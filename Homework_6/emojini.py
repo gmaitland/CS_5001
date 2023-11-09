@@ -7,6 +7,19 @@
 
 
 def read_emoji_file(file_name: str):
+    """
+    Function: read_emoji_file()
+        Reads the emoji file and creates the mappings
+
+    Parameters:
+        file_name (type: str)
+
+    Returns:
+        emoji_dict
+
+    Defense:
+        none
+    """
     emoji_dict = {'english_to_western': {},
                   'english_to_kaomoji': {},
                   'kaomoji_to_english': {},
@@ -31,6 +44,19 @@ def read_emoji_file(file_name: str):
 
 
 def parse_directives_file(file_name: str):
+    """
+    Function: parse_directives_file()
+        Parses the directives file to see what to read/ write
+
+    Parameters:
+        file_name (type: str)
+
+    Returns:
+        instructions
+
+    Defense:
+        none
+    """
     instructions = []
     with open(file_name, 'r', encoding='utf-8') as file:
         for line in file:
@@ -46,6 +72,21 @@ def parse_directives_file(file_name: str):
 
 
 def translate_text(source_text: str, emoji_dict: dict, mode: str):
+    """
+    Function: translate_text()
+        Translates the text into the appropriate language mapping
+
+    Parameters:
+        source_text (type: str)
+        emoji_dict (type: dict)
+        mode (type: str)
+
+    Returns:
+        ' '.join(translated_words)
+
+    Defense:
+        none
+    """
     words = source_text.split()
     translated_words = []
     # print(emoji_dict)
@@ -64,6 +105,19 @@ def translate_text(source_text: str, emoji_dict: dict, mode: str):
 
 
 def strip_punctuation(word: str):
+    """
+    Function: strip_punctuation()
+        Removes the appropriate punctuation
+
+    Parameters:
+        word (type: str)
+
+    Returns:
+        word, prefix, suffix
+
+    Defense:
+        none
+    """
     prefix, suffix = '', ''
     while word and not word[0].isalnum():
         prefix += word[0]
@@ -75,11 +129,39 @@ def strip_punctuation(word: str):
 
 
 def write_to_file(translated_text: str, file_name: str):
+    """
+    Function: write_to_file()
+        Writes details to a file.
+
+    Parameters:
+        translated_text (type: str)
+        file_name (type: str)
+
+    Returns:
+        none
+
+    Defense:
+        none
+    """
     with open(file_name, 'w', encoding='utf-8') as file:
         file.write(translated_text)
 
 
 def batch_translate(emoji_file_name: str, directives_file_name: str):
+    """
+    Function: batch_translate()
+        Translates multiple files from a single call
+
+    Parameters:
+        emoji_file (type: str)
+        directives_file_name (type: str)
+
+    Returns:
+        none
+
+    Defense:
+        try / except blocks
+    """
     try:
         emoji_dict = read_emoji_file(emoji_file_name)
         if not emoji_dict:
@@ -93,10 +175,12 @@ def batch_translate(emoji_file_name: str, directives_file_name: str):
 
         for instruction in translation_instructions:
             try:
-                with open(instruction['source_file'], 'r', encoding='utf-8') as file:
+                with open(instruction['source_file'],
+                          'r', encoding='utf-8') as file:
                     source_text = file.read()
                 translated_text = translate_text(source_text,
-                                                 emoji_dict, instruction['mode'])
+                                                 emoji_dict,
+                                                 instruction['mode'])
                 write_to_file(translated_text, instruction['output_file'])
                 print(f"Processed {instruction['source_file']}:"
                       f" {instruction['mode'].replace('_', ' -> ')}")

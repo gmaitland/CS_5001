@@ -33,7 +33,8 @@ def load_travelers(travelers_file_name: str):
                 try:
                     credits = int(credits_str)
                 except ValueError:
-                    print(f"Invalid number of credits: {credits_str} for traveler:"
+                    print(f"Invalid number of credits:"
+                          f" {credits_str} for traveler:"
                           f" {name}. Skipping.")
                     continue
                 travelers[user_id] = {'name': name, 'credits': credits}
