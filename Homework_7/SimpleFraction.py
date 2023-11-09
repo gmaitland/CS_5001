@@ -29,7 +29,7 @@ class SimpleFraction:
     @staticmethod
     def validate(numerator, denominator):
         if not isinstance(numerator, int) or not isinstance(denominator, int):
-            raise ValueError("Numerator and denominator must be integers")
+            raise ValueError("Numerator and denominator must be of integers")
         if denominator == 0:
             raise ValueError("Denominator cannot be zero")
 
