@@ -6,7 +6,6 @@
 """
 
 
-
 def read_emoji_file(file_name: str):
     emoji_dict = {'english_to_western': {},
                   'english_to_kaomoji': {},
@@ -54,13 +53,16 @@ def translate_text(source_text: str, emoji_dict: dict, mode: str):
         word_cleaned, prefix, suffix = strip_punctuation(word)
         # print(word_cleaned)
         if word_cleaned.lower() in emoji_dict[mode]:
-            translated_word = prefix + emoji_dict[mode][word_cleaned.lower()] + suffix
+            translated_word = (prefix +
+                               emoji_dict[mode][word_cleaned.lower()] + suffix)
         else:
             translated_word = word
         translated_words.append(translated_word)
 
     return ' '.join(translated_words)
     # Word may not be getting identified.
+
+
 def strip_punctuation(word: str):
     prefix, suffix = '', ''
     while word and not word[0].isalnum():
@@ -71,9 +73,11 @@ def strip_punctuation(word: str):
         word = word[:-1]
     return word, prefix, suffix
 
+
 def write_to_file(translated_text: str, file_name: str):
     with open(file_name, 'w', encoding='utf-8') as file:
         file.write(translated_text)
+
 
 def batch_translate(emoji_file_name: str, directives_file_name: str):
     try:
@@ -91,11 +95,14 @@ def batch_translate(emoji_file_name: str, directives_file_name: str):
             try:
                 with open(instruction['source_file'], 'r', encoding='utf-8') as file:
                     source_text = file.read()
-                translated_text = translate_text(source_text, emoji_dict, instruction['mode'])
+                translated_text = translate_text(source_text,
+                                                 emoji_dict, instruction['mode'])
                 write_to_file(translated_text, instruction['output_file'])
-                print(f"Processed {instruction['source_file']}: {instruction['mode'].replace('_', ' -> ')}")
+                print(f"Processed {instruction['source_file']}:"
+                      f" {instruction['mode'].replace('_', ' -> ')}")
             except FileNotFoundError:
-                print(f"The source file {instruction['source_file']} was not found.")
+                print(f"The source file "
+                      f"{instruction['source_file']} was not found.")
             except IOError as e:
                 print(f"An I/O error occurred: {e}")
             except Exception as e:
@@ -106,6 +113,7 @@ def batch_translate(emoji_file_name: str, directives_file_name: str):
         print(f"An unexpected error occurred during batch processing: {e}")
 
     print("All files processed.")
+
 
 if __name__ == "__main__":
     batch_translate("emojis.txt", "emoji_directives.txt")

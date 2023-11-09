@@ -33,11 +33,13 @@ def load_travelers(travelers_file_name: str):
                 try:
                     credits = int(credits_str)
                 except ValueError:
-                    print(f"Invalid number of credits: {credits_str} for traveler: {name}. Skipping.")
+                    print(f"Invalid number of credits: {credits_str} for traveler:"
+                          f" {name}. Skipping.")
                     continue
                 travelers[user_id] = {'name': name, 'credits': credits}
     except FileNotFoundError:
-        print(f"The file {travelers_file_name} does not exist. Please check the filename and try again.")
+        print(f"The file {travelers_file_name} does not exist. "
+              f"Please check the filename and try again.")
         return None
     return travelers
 
@@ -85,10 +87,12 @@ def process_requests(travelers, request_file_name: str):
                     if traveler_info['credits'] >= 500:
                         traveler_info['credits'] -= 500
                         week_booked[week] = user_id
-                        bookings_file.write(f"{week} - {user_id} - {traveler_info['name']}\n")
+                        bookings_file.write(f"{week} - {user_id} -"
+                                            f" {traveler_info['name']}\n")
 
     except FileNotFoundError:
-        print(f"The file {request_file_name} does not exist. Please check the filename and try again.")
+        print(f"The file {request_file_name} does not exist. "
+              f"Please check the filename and try again.")
         return
 
     print("Finished processing reservations. Beam us up, Scottie!")
