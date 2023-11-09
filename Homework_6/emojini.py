@@ -6,6 +6,7 @@
 """
 
 
+
 def read_emoji_file(file_name: str):
     emoji_dict = {'english_to_western': {},
                   'english_to_kaomoji': {},
@@ -75,16 +76,34 @@ def write_to_file(translated_text: str, file_name: str):
         file.write(translated_text)
 
 def batch_translate(emoji_file_name: str, directives_file_name: str):
-    emoji_dict = read_emoji_file(emoji_file_name)
-    translation_instructions = parse_directives_file(directives_file_name)
+    try:
+        emoji_dict = read_emoji_file(emoji_file_name)
+        if not emoji_dict:
+            print("Failed to load emoji mappings. Exiting.")
+            return
 
-    for instruction in translation_instructions:
-        with open(instruction['source_file'], 'r', encoding='utf-8') as file:
-            source_text = file.read()
+        translation_instructions = parse_directives_file(directives_file_name)
+        if not translation_instructions:
+            print("Failed to load translation instructions. Exiting.")
+            return
 
-        translated_text = translate_text(source_text, emoji_dict, instruction['mode'])
-        write_to_file(translated_text, instruction['output_file'])
-        print(f"Processed {instruction['source_file']}: {instruction['mode'].replace(' ', ' -> ')}")
+        for instruction in translation_instructions:
+            try:
+                with open(instruction['source_file'], 'r', encoding='utf-8') as file:
+                    source_text = file.read()
+                translated_text = translate_text(source_text, emoji_dict, instruction['mode'])
+                write_to_file(translated_text, instruction['output_file'])
+                print(f"Processed {instruction['source_file']}: {instruction['mode'].replace('_', ' -> ')}")
+            except FileNotFoundError:
+                print(f"The source file {instruction['source_file']} was not found.")
+            except IOError as e:
+                print(f"An I/O error occurred: {e}")
+            except Exception as e:
+                print(f"An error occurred during processing: {e}")
+
+        print("All files processed.")
+    except Exception as e:
+        print(f"An unexpected error occurred during batch processing: {e}")
 
     print("All files processed.")
 
