@@ -32,6 +32,7 @@
 letters = "abcde"
 for letter in letters:
     print(letter)
+    print(letter)
 
 # Demonstrate while loop
 letters = "abcde"

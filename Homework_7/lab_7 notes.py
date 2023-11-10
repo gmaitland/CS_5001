@@ -30,8 +30,13 @@ if __name__ == "__main__":
 
 
 """
-    Special Methods
+    Special Methods:
     __str__(self)
     __eq__(self, other)
     __init__(self)
+    
+    Objects have attributes
+    singleton = None # Only 1 instance of the class
+    getter and setter methods
+    'dundder methods' == double underscore method
 """
