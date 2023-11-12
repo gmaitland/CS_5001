@@ -87,4 +87,4 @@ letters = "abcde"
 i = 0
 while i < len(letters):
     print(letters[i])
-    i += 1
+    i += 2
