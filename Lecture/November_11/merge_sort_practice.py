@@ -32,10 +32,43 @@ def merge(L1: list, L2: list) -> list:
     # Note that one of them will be empty because of the loop condition.
     newL.extend(L1[i1:])
     newL.extend(L2[i2:])
-    print(newL)
+    # print(newL)
     return newL
 
-""" """
+
+""" About to create a mergesort algorithm. Merge sort, use merge to do the
+    bulk of the work. It does this by making a list of one-item lists.
+    As long as there are two lists to merge, they are merged."""
+
+
+def mergesort(L: list) -> None:
+    """
+    Reorder the items in L from smallest to largest.
+
+    >>> L = [3, 4, 7, -1, 2, 5]
+    >>> mergesort(L)
+    >>> L
+    [-1, 2, 3, 4, 5, 7]
+    """
+
+    # Make a list of 1-item lists so that we can start merging.
+    workspace = []
+    for i in range(len(L)):
+        workspace.append([L[i]])
+
+    # The next two lists to merge are workspace[i] and workspace[i + 1].
+    i = 0
+    # As long as there are at least two more lists to merge, merge them.
+    while i < len(workspace) - 1:
+        L1 = workspace[i]
+        L2 = workspace[i + 1]
+        newL = merge(L1, L2)
+        workspace.append(newL)
+        i += 2
+
+    # Copy the result back into L.
+    if len(workspace) != 0:
+        L[:] = workspace[-1][:]
 
 
 def main():
@@ -43,8 +76,8 @@ def main():
     list2 = [0, 343, 99, 343, 343243]
     list3 = merge(list1, list2)
     print(list3)
-    list4 = mergesort(list3)
-    print(list4)
+    mergesort(list3)
+    print(list3)
 
 
 if __name__ == "__main__":
