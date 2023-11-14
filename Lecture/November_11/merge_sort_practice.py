@@ -37,6 +37,7 @@ def merge(L1: list, L2: list) -> list:
 
 """ """
 
+
 def main():
     list1 = [1, 3, 5, 9, 93, 93]
     list2 = [0, 343, 99, 343, 343243]
