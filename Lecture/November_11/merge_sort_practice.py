@@ -82,3 +82,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Try to create bubble_sort(L)
+
+def bubble_sort(L: list) -> None:
+    workspace = []
+    i1 = 0
+    i2 = 1
+
