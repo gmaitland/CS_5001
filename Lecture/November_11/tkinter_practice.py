@@ -11,7 +11,8 @@ import tkinter
 window = tkinter.Tk()
 data = tkinter.StringVar()
 data.set('Data to display '
-         'Data to test')
+         'Data to test'
+         'Hello World')
 # data.set('Show your work')
 label = tkinter.Label(window, textvariable=data)
 label.pack()
