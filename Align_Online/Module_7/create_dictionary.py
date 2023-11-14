@@ -88,3 +88,6 @@ i = 0
 while i < len(letters):
     print(letters[i])
     i += 3
+
+for letter in letters:
+    print(f"{letter} + 1")
