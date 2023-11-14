@@ -77,7 +77,6 @@ def main():
     list3 = merge(list1, list2)
     print(list3)
     mergesort(list3)
-    print(list3)
 
 
 if __name__ == "__main__":
