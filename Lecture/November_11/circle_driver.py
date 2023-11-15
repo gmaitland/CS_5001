@@ -20,6 +20,8 @@ def main():
     print(cc.get_area())
 
     print(c == copy)
+    # Checking the equivalence of the object instance
+
 
 
 if __name__ == "__main__":

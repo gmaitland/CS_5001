@@ -10,6 +10,7 @@ PI = 3.1415
 
 class Circle:
     def __init__(self, radius, x = 0, y = 0):
+
         self.radius = radius
         self.x = x
         self.y = y
@@ -29,3 +30,7 @@ class Circle:
 
     def __str__(self):
         return "Circle with radius " + str(self.radius)
+
+    def __eq__(self, other):
+        return (self.radius == other.radius) and (self.color == other.color)
+
