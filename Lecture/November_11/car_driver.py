@@ -5,7 +5,7 @@
     Lecture - car_driver.py
 """
 
-from Car import Car
+from car import Car
 
 
 def main():
@@ -18,6 +18,9 @@ def main():
     smart_car.register(2021)
 
     other_car.drive()
+
+    print(car)
+    print(car.get_mileage() + 1 ) # Legal but not recommended
 
 
 if __name__ == "__main__":
