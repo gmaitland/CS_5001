@@ -7,6 +7,8 @@
 
 PI = 3.1415
 
+# Class names are in pascal case. Classes are singular, they are not plural
+
 
 class Circle:
     def __init__(self, radius, x = 0, y = 0):

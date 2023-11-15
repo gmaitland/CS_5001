@@ -8,6 +8,7 @@
 from circle import Circle
 
 
+
 def main():
     c = Circle(2, 1, 1)
     cc = Circle(3)
@@ -20,6 +21,7 @@ def main():
     print(cc.get_area())
 
     print(c == copy)
+
     # Checking the equivalence of the object instance
 
 
