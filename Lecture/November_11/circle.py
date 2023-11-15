@@ -27,7 +27,5 @@ class Circle:
     def get_Y(self):
         return self.y
 
-
-
-if __name__ == "__main__":
-    main()
+    def __str__(self):
+        return "Circle with radius " + str(self.radius)
