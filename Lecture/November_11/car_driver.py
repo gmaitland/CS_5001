@@ -21,6 +21,7 @@ def main():
 
     print(car)
     print(car.get_mileage() + 1 ) # Legal but not recommended
+    print(car + "This is the current mileage for the vehicle")
 
 
 if __name__ == "__main__":
