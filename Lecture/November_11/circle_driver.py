@@ -8,7 +8,6 @@
 from circle import Circle
 
 
-
 def main():
     c = Circle(2, 1, 1)
     cc = Circle(3)

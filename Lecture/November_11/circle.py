@@ -24,6 +24,9 @@ class Circle:
     def get_area(self):
         return PI * self.radius ** 2
 
+    def get_radius(self):
+        return self.radius
+
     def get_X(self):
         return self.x
 

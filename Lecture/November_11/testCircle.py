@@ -20,8 +20,18 @@ class TestCircle(unittest.TestCase):
 
     def test_get_area(self):
         c = Circle(2)
-        self.assertAlmostEqual(c.get_area(), PI * 4, "Incorrect Area")
+        self.assertAlmostEqual(PI * 4, c.get_area(), "Incorrect Area")
 
     def test_get_X(self):
         c = Circle(2, 3, 3)
-        self.assertEqual(c.get_X, 3)
+        self.assertEqual(c.get_X(), 3)
+
+    # negative test
+
+    def test_bad_init(self):
+        with self.assertRaises(ValueError):
+            c = Circle(-2)
+def main():
+    unittest.main(verbosity=3)
+
+main()
