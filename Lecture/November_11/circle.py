@@ -15,6 +15,19 @@ class Circle:
         self.y = y
         self.color = "blue"
 
+        if radius <= 0:
+            raise ValueError
+
+    def get_area(self):
+        return PI * self.radius ** 2
+
+    def get_X(self):
+        return self.x
+
+    def get_Y(self):
+        return self.y
+
+
 
 if __name__ == "__main__":
     main()
