@@ -7,6 +7,9 @@
 
 from stack import Stack
 
+# We prefer composition over inheritance
+
+
 def main():
     s = Stack()
 
