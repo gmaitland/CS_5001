@@ -36,9 +36,11 @@ def merge(L1: list, L2: list) -> list:
     return newL
 
 
-""" About to create a mergesort algorithm. Merge sort, use merge to do the
-    bulk of the work. It does this by making a list of one-item lists.
-    As long as there are two lists to merge, they are merged."""
+    """ 
+        About to create a mergesort algorithm. Merge sort, use merge to do the
+        bulk of the work. It does this by making a list of one-item lists.
+        As long as there are two lists to merge, they are merged
+    """
 
 
 def mergesort(L: list) -> None:
@@ -83,7 +85,6 @@ if __name__ == "__main__":
     main()
 
 # Try to create bubble_sort(L)
-
 def bubble_sort(L: list) -> None:
     workspace = []
     i1 = 0
