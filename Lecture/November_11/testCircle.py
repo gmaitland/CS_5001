@@ -4,6 +4,8 @@
     11/14/2023
     Lecture - testCircle.py
 """
+import unittest
+from circle import Circle
 
 PI = 3.1415
 
