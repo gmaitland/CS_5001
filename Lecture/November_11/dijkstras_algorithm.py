@@ -13,4 +13,30 @@ graphs = {
     'd':{}
 }
 
+class Node:
+    def __init__(self, x_cord, y_coord):
+        self.d= float('inf')
+        self.parent= None
+        self.finished= False
+
+def dijkstra(graph, source):
+    nodes={}
+    for node in graph:
+        noges[node]=Node{}
+    nodes[source.d=0]
+    queue=[(0, source)] #priority queue
+    while queue:
+        d,node=heapq.heappop(queue)
+        if noges[node].finished:
+            continue
+        nodes[node].finished=True
+        for neighbor in graph[node]:
+            if nodes[neighbor].finished:
+                continue
+        new_d=d+graph[node][neighbor]
+        if new_d<nodes[neighbor].d:
+            nodes[neighbor].d=new_d
+            nodes[neighbor].parent=node
+            heapq.heappush(queue,(new_d,neighbor))
+    return nodes
 
