@@ -22,7 +22,7 @@ class Node:
 def dijkstra(graph, source):
     nodes={}
     for node in graph:
-        noges[node]=Node{}
+        noges[node]=Node()
     nodes[source.d=0]
     queue=[(0, source)] #priority queue
     while queue:
