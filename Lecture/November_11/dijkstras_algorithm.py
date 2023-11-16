@@ -39,5 +39,6 @@ def dijkstra(graph, source):
             nodes[neighbor].d=new_d
             nodes[neighbor].parent=node
             heapq.heappush(queue,(new_d,neighbor))
+    print(nodes)
     return nodes
 
