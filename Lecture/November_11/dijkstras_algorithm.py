@@ -19,12 +19,13 @@ class Node:
         self.parent= None
         self.finished= False
 
+
 def dijkstra(graph, source):
     nodes={}
     for node in graph:
         noges[node]=Node()
-    nodes[source.d=0]
-    queue=[(0, source)] #priority queue
+    nodes[source].d=0
+    queue=[(0, source)] # priority queue
     while queue:
         d,node=heapq.heappop(queue)
         if noges[node].finished:
