@@ -1,3 +1,11 @@
+"""
+    Garfield Maitland
+    CS 5001
+    11/16/2023
+    Lab 8 - testClass.py
+"""
+
+
 class CreditCard:
     def __init__(self, number, balance):
         self.number = number
