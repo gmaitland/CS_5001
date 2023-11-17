@@ -31,7 +31,9 @@ class TestCircle(unittest.TestCase):
     def test_bad_init(self):
         with self.assertRaises(ValueError):
             c = Circle(-2)
+
+
 def main():
-    unittest.main(verbosity=3)
+    unittest.main(verbosity=2)
 
 main()

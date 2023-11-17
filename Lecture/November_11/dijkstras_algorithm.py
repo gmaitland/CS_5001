@@ -47,6 +47,7 @@ def dijkstra(graph, source):
 def main():
     a = []
     b = {}
+    b = []
     dijkstra(graphs, a)
 
 
