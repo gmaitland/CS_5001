@@ -11,16 +11,20 @@ graphs = {
     'a': {'b': 4},
     'b': {'a': 3, 'c': 2, 'd': 5},
     'c': {'d': 2},
-    'd': {}
+    'd': {'a': 9, 'e': 3},
+    'e': {'a': 2, 'b': 3, 'c': 5}
 }
+
 
 class Node:
     def __init__(self):
         self.d = float('inf')
         self.parent = None
         self.finished = False
+
     def __str__(self):
         return f"Distance: {self.d}, Parent: {self.parent}, Finished: {self.finished}"
+
 
 def dijkstra(graph, source):
     nodes = {}
@@ -45,8 +49,10 @@ def dijkstra(graph, source):
         print(f"Node {node}: {nodes[node]}")
     return nodes
 
+
 def main():
     dijkstra(graphs, 's')
+
 
 if __name__ == "__main__":
     main()
