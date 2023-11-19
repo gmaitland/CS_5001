@@ -55,6 +55,7 @@ def dijkstra(graph, source):
 
 def main():
     dijkstra(graphs, 's')
+    print("Graph Traversal Complete!")
 
 
 if __name__ == "__main__":
