@@ -21,4 +21,4 @@
 """
 
 basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
-print(basket)
+print(basket + "This is the set")
