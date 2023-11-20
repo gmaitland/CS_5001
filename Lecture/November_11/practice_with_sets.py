@@ -31,8 +31,12 @@ a = set('abracadabra')
 b = set('alacazam')
 
 print(a)    # prints unique letters in a
-print(a - b)    # prints unique letters in a but not in b
-print(a | b)    # prints set union
+print(a - b)    # prints set subtraction
+print(a | b)    # prints set disjunction (union)
 print(a & b)    # prints set conjunction
-# print(a ^ b)    # exclusive or
+print(a ^ b)    # exclusive or
 
+# We can also do set comprehension
+
+c = {x for x in 'abracadabra' if x not in 'abc'}
+print(c)
