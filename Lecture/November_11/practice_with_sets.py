@@ -21,12 +21,16 @@
 """
 
 basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
-# print(basket, "This is the set")
+print(basket, "This is the set")    # show that duplicates have been removed
 
-print('orange' in basket)
+print('orange' in basket)   # fast membership testing
 
+# Demonstrate set operations on unique letters from two words
 
 a = set('abracadabra')
 b = set('alacazam')
 
-print(a - b)
+print(a)    # prints unique letters in a
+print(a - b)    # prints unique letters in a but not in b
+print(a | b)
+
