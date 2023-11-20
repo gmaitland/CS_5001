@@ -13,9 +13,12 @@
     entries. Set objects also support mathematical operations like
     union, intersection, difference, and symmetric difference.
     
-    Curly braces or the set() built in function can used to create sets.
+    Curly braces, or the set() built in function can used to create sets.
     To create an empty set, you have to use set(). This is because 
     {} creates an empty dictionary, not an empty set.
     
-    Let'
+    Let's get started
 """
+
+basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+print(basket)
