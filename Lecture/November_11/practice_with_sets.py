@@ -32,5 +32,7 @@ b = set('alacazam')
 
 print(a)    # prints unique letters in a
 print(a - b)    # prints unique letters in a but not in b
-print(a | b)
+print(a | b)    # prints set union
+print(a & b)    # prints set conjunction
+# print(a ^ b)    # exclusive or
 
