@@ -9,4 +9,8 @@
     Dictionaries are sometimes called associative memories. Associative arrays
 """
 
+
 tel = {'jack' : 4098, 'sape' : 4139}
+tel['guido'] = 4127
+print(tel)
+
