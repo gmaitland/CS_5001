@@ -52,6 +52,24 @@ def divide(item, value):
     A predicate is boolean; it is either true or false.
 """
 
+
+def less_than_ten(x): # predicate returns true or false
+    return x < 10
+
+"""
+    Learned about lambda functions. Lambda functions are anonymous(unnamed) functions
+    that can be disposed of after use. We can create them in another function. We can
+    pass them around as arguments. We can use them in one spot, and then forget them.
+"""
+
+
+def example():
+    ex = lambda x: x + 1
+    print(ex(5))
+
+
+
+
 def main():
     a_list = [1, 2, 3, 4, 5]
     b_list = apply_to_all(a_list, multiply, 5) # multiply by 5
@@ -60,6 +78,7 @@ def main():
     print(c_list)
     d_list = apply_to_all(b_list, divide, 5) # divide by 5
     print(d_list)
+
 
 
 if __name__ == "__main__":
