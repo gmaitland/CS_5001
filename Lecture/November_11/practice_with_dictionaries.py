@@ -42,4 +42,8 @@ print(tel)
 sorted(tel)
 print(tel)
 
+print('guido' in tel)
+
+print('jack' not in tel)
+
 
