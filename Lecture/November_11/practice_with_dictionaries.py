@@ -90,3 +90,15 @@ answers = ['lancelot', 'the holy grail', 'blue']
 responses = ['nice to meet you', 'good luck', 'great']
 for q, a, r in zip(questions, answers, responses):
     print('What is your {0}?, It is {1}. Ok, {2}.'.format(q, a, r))
+
+# We can also loop over a sequence in reverse
+# All we have to do is specify the sequence in the forward direction
+# and then call the reversed() function
+
+for i in reversed(range(1, 10, 2)):
+    print(i)
+
+# Ok we just incremented by 2. Let's increment by 3.
+
+for j in reversed(range(1, 20, 3)):
+    print(j)
