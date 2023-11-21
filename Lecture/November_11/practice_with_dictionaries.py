@@ -4,6 +4,7 @@
     11/19/2023
     Practice - practice_with_dictionaries.py
 """
+import math
 
 """
     Dictionaries are sometimes called associative memories or associative arrays. Unlike sequences,
@@ -116,3 +117,13 @@ for i in sorted(basket):
 
 for f in sorted(set(basket)):
     print(f)
+
+# It is better to create a new list when looping over it
+
+raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5, float('NaN'), 47.8]
+filtered_data = []
+for value in raw_data:
+    if not math.isnan(value):
+        filtered_data.append(value)
+
+print(filtered_data)
