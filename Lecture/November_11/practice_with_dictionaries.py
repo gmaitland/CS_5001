@@ -46,4 +46,15 @@ print('guido' in tel)
 
 print('jack' not in tel)
 
+# We can create dictionaries with the dict() constructor from
+# sequences of key value pairs
+
+z = dict([('adam', 100), ('bob', 200), ('charlie', 300)])
+print(z)
+
+# We can also use dictionary comprehension to create key value:value pairs
+
+y = {x: x**2 for x in (2, 4, 6)}
+print(y)
+
 
