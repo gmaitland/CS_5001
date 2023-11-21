@@ -66,3 +66,18 @@ print(x)
 """
 
 
+# Using set on a sequence eliminates duplicates
+
+# We are about to cover Looping Techniques
+
+knights = {'gallahad': 'the pure', 'robin': 'the brave', 'garfield': 'the focused'}
+for k, v in knights.items():
+    print(k, v)
+
+# So that is how we do it. We create two temp variables to loop the dict()
+
+# We can also retrieve the position index and corresponding value pair
+# with the enumerate() function
+
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print(i, v)
