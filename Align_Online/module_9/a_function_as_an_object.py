@@ -68,7 +68,10 @@ def example():
     print(ex(5))
 
 
-
+def map_example():
+    lst = [1, 2, 3, 4]
+    new_lst = list(map(lambda x: x**2, lst))
+    print(new_lst)
 
 def main():
     a_list = [1, 2, 3, 4, 5]
@@ -78,6 +81,7 @@ def main():
     print(c_list)
     d_list = apply_to_all(b_list, divide, 5) # divide by 5
     print(d_list)
+    print(example())
 
 
 
