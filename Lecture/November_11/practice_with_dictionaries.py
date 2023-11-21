@@ -81,3 +81,12 @@ for k, v in knights.items():
 
 for i, v in enumerate(['tic', 'tac', 'toe']):
     print(i, v)
+
+# I think this current one is a bit advanced. Let's begin
+# We can loop over two or more sequences at the same time
+
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+responses = ['nice to meet you', 'good luck', 'great']
+for q, a, r in zip(questions, answers, responses):
+    print('What is your {0}?, It is {1}. Ok, {2}.'.format(q, a, r))
