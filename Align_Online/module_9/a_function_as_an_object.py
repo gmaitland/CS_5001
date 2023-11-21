@@ -46,6 +46,12 @@ def divide(item, value):
     return item / value
 
 
+"""
+    Predicates are functions(or methods) that take a single argument
+    and return either True or False. Used to compose higher order functions
+    A predicate is boolean; it is either true or false.
+"""
+
 def main():
     a_list = [1, 2, 3, 4, 5]
     b_list = apply_to_all(a_list, multiply, 5) # multiply by 5
