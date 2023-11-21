@@ -102,3 +102,17 @@ for i in reversed(range(1, 10, 2)):
 
 for j in reversed(range(1, 20, 3)):
     print(j)
+
+# It is possible to loop over a sorted order with the sorted() function.
+# This leaves the source unaltered
+
+basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+for i in sorted(basket):
+    print(i)
+
+# Using the set() function on a sequence eliminates duplicate elements.
+# You can also combine with the sorted function to synergized the operation
+# in an idiomatic way
+
+for f in sorted(set(basket)):
+    print(f)
