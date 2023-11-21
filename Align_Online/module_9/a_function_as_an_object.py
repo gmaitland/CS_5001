@@ -66,6 +66,13 @@ def less_than_ten(x): # predicate returns true or false
 def example():
     ex = lambda x: x + 1
     print(ex(5))
+    # print(ex(11))
+    # ex(num)
+
+
+def test():
+    large_int = lambda x: x*10
+    print(large_int(2))
 
 
 def map_example():
@@ -85,7 +92,8 @@ def main():
     d_list = apply_to_all(b_list, divide, 5) # divide by 5
     print(d_list)
     print(example())
-    print(map_example())
+    # print(map_example())
+    print(test())
 
 
 if __name__ == "__main__":
