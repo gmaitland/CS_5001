@@ -73,6 +73,9 @@ def map_example():
     new_lst = list(map(lambda x: x**2, lst))
     print(new_lst)
 
+
+# Margaret Hamilton MIT scientist coined the term "software engineer"
+
 def main():
     a_list = [1, 2, 3, 4, 5]
     b_list = apply_to_all(a_list, multiply, 5) # multiply by 5
