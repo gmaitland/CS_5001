@@ -34,5 +34,12 @@ print(tel)
 tel['jack']
 
 del tel['sape']
+tel['irv'] = 4127
+tel
+list(tel)
+print(tel)
+
+sorted(tel)
+print(tel)
 
 
