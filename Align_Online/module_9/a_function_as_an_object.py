@@ -1,4 +1,11 @@
 """
+    Garfield Maitland
+    CS 5001
+    11/21/2023
+    Practice - a_function_as_an_object.py
+"""
+
+"""
     This program has a few working parts. At a high level, we have defined 3 functions.
     We have the apply_to_all() function, the multiply() function and of course,
     we have our main function. The apply_to_all() function is where the majority
@@ -45,6 +52,8 @@ def main():
     print(b_list)
     c_list = apply_to_all(a_list, divide, 5) # divide by 5
     print(c_list)
+    d_list = apply_to_all(b_list, divide, 5) # divide by 5
+    print(d_list)
 
 
 if __name__ == "__main__":
