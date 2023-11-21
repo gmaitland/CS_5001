@@ -44,6 +44,7 @@ def main():
     b_list = apply_to_all(a_list, multiply, 5) # multiply by 5
     print(b_list)
     c_list = apply_to_all(a_list, divide, 5) # divide by 5
+    print(c_list)
 
 
 if __name__ == "__main__":
