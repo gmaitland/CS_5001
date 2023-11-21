@@ -1,3 +1,10 @@
+"""
+    Garfield Maitland
+    CS 5001
+    11/21/2023
+    Practice - queue_circular.py
+"""
+
 ''' Align Online
     CS5001
     Sample code -- example of implementing the Queue ADT.
@@ -69,7 +76,7 @@ def main():
             my_queue.dump()
         elif cmd == "exit":
             break
-
+    print("It was updated")
 
 if __name__ == "__main__":
     main()
