@@ -57,4 +57,12 @@ print(z)
 y = {x: x**2 for x in (2, 4, 6)}
 print(y)
 
+x = dict(david=1, eric=2, fred=3)
+print(x)
+
+"""
+    In summary. We created a dictionary in three different ways. We used the
+    We used {}, the dict() function on a list, and the dict(key=value) specification
+"""
+
 
