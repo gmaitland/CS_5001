@@ -82,7 +82,7 @@ def main():
     d_list = apply_to_all(b_list, divide, 5) # divide by 5
     print(d_list)
     print(example())
-
+    print(map_example())
 
 
 if __name__ == "__main__":
