@@ -72,7 +72,7 @@ def example():
 
 def test():
     large_int = lambda x: x*10
-    print(large_int(2))
+    print(large_int(10))
 
 
 def map_example():
