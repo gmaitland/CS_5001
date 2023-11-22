@@ -53,6 +53,8 @@ def main():
     print(reduce_to_single_value(a, (lambda x,y: x + y), 0))
     print(reduce_to_single_value(b, (lambda x, y: x + y), 0))
     print(reduce_to_single_value(c, (lambda x, y: x + y), 0))
+    print(reduce_to_single_value(["Hello ", "World", "!"], (lambda x, y: x + y), ""))
+
 
 if __name__ == "__main__":
     main()
