@@ -28,6 +28,10 @@ def apply_lambda(lst, a_function):
     return out
 
 
+def reduce_to_single_value(lst, a_function, initial_value=0):
+
+
+
 def main():
     a = [1, 2, 3, 4, 5]
     b = apply_to_all(a, multiply, 5)
