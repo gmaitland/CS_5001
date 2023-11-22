@@ -7,7 +7,7 @@
 
 from stack import Stack
 
-# We prefer composition over inheritance
+# We prefer composition to inheritance
 
 
 def main():
