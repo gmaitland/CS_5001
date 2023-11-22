@@ -1,6 +1,7 @@
 from SimpleFraction import SimpleFraction
 import turtle
 
+
 class FractionTurtlePresenter:
     """
     FractionTurtlePresenter is a 'View' for the Fraction model. It is

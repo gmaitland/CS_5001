@@ -39,7 +39,7 @@ def reduce_to_single_value(lst, a_function, initial_value=0):
 def main():
     a = [1, 2, 3, 4, 5]
     b = apply_to_all(a, multiply, 5)
-    c = apply_to_all(a, subtract, 1)
+    c = apply_to_all(a, subtract, 2)
     print(a)
     print(b)
     print(c)
