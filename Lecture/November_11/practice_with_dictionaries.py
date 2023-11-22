@@ -63,7 +63,7 @@ print(x)
 
 """
     In summary. We created a dictionary in three different ways. We used the
-    We used {}, the dict() function on a list, and the dict(key=value) specification
+    We used {}, the dict() function on a list, and the dict(key=value) specification.
 """
 
 
