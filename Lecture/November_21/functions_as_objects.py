@@ -29,6 +29,10 @@ def apply_lambda(lst, a_function):
 
 
 def reduce_to_single_value(lst, a_function, initial_value=0):
+    result = initial_value
+    for item in lst:
+        result = a_function(result, item)
+    return result
 
 
 
@@ -45,7 +49,10 @@ def main():
     d = apply_lambda(a, lambda x: x * 10)   # This is the lambda expression
     print(d)
 
-
+    print("-------> fold/reduce <--------")
+    print(reduce_to_single_value(a, (lambda x,y: x + y), 0))
+    print(reduce_to_single_value(b, (lambda x, y: x + y), 0))
+    print(reduce_to_single_value(c, (lambda x, y: x + y), 0))
 
 if __name__ == "__main__":
     main()
