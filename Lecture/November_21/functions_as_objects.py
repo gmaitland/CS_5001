@@ -19,3 +19,15 @@ def multiply(item, value):
 
 def subtract(item, value):
     return item - value
+
+
+def main():
+    a = [1, 2, 3, 4, 5]
+    b = apply_to_all(a, multiply, 5)
+    c = apply_to_all(a, subtract, 1)
+    print(a)
+    print(b)
+    print(c)
+
+if __name__ == "__main__":
+    main()
