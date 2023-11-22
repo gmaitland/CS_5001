@@ -21,6 +21,13 @@ def subtract(item, value):
     return item - value
 
 
+def apply_lambda(lst, a_function):
+    out = []
+    for item in lst:
+        out.append(a_function(item))
+    return out
+
+
 def main():
     a = [1, 2, 3, 4, 5]
     b = apply_to_all(a, multiply, 5)
@@ -28,6 +35,12 @@ def main():
     print(a)
     print(b)
     print(c)
+
+    print("------------\n")
+
+    d = apply_lambda(a, lambda x: x * 10)   # This is the lambda expression
+    print(d)
+
 
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@
 
 
 def binary_stack(digits):
-    s = Stack() # create the stack
+    s = Stack()     # create the stack
     for each in digits:
         s.push(each)
 

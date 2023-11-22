@@ -56,6 +56,7 @@ def divide(item, value):
 def less_than_ten(x): # predicate returns true or false
     return x < 10
 
+
 """
     Learned about lambda functions. Lambda functions are anonymous(unnamed) functions
     that can be disposed of after use. We can create them in another function. We can
