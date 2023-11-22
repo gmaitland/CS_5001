@@ -12,7 +12,10 @@ def apply_to_all(lst, a_function, a_value):
         out.append(a_function(item, a_value))
     return out
 
+
 def multiply(item, value):
     return item * value
 
-def div
+
+def subtract(item, value):
+    return item - value
