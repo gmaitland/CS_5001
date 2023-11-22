@@ -1,5 +1,6 @@
 from SimpleFraction import SimpleFraction
 
+
 class FractionTextPresenter:
     def __init__(self, fraction):
         self.fraction = fraction
