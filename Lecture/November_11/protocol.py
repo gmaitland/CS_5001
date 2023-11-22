@@ -1,3 +1,14 @@
+"""
+    Garfield Maitland
+    CS 5001
+    11/21/2023
+    Lecture - protocol.py
+"""
+
+from square import Square
+from circle import Circle
+from queue import Queue
+
 
 def main():
     q = Queue()
