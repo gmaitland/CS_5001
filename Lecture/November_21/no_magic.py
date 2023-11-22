@@ -32,6 +32,8 @@ def main():
     b = random.choice(FUNCTIONS)
     b()
 
+    b = random.choice(FUNCTIONS)
+
 
 if __name__ == "__main__":
     main()
