@@ -5,12 +5,6 @@
     Align Online Module 7 - factorial.py
 """
 
-''' Align Online
-    CS5001
-    Sample code for Module 9: Recursion.
-    Two implementations of a function that calculates the factorial of n.
-'''
-
 """
     We implemented two functions that calculates the factorial of n. The
     1st function is an iterative solution of calculating the factorial.
@@ -43,3 +37,5 @@ def r_factorial(n):
     else:
         product = r_factorial(n - 1) * n
     return product
+
+# Ran out of memory for stack frames

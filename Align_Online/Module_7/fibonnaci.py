@@ -11,6 +11,11 @@
     Two implementations of a function that calculates the nth Fibonnaci number.
 '''
 
+"""
+    Created 2 implementations of the fibonnaci sequence. This appears frequently
+    in mathematics and nature.
+"""
+
 
 def fib(n):
     '''
