@@ -18,11 +18,11 @@
 
 
 def fib(n):
-    '''
-    function: fib, an iterative solution for calculating the nth Fibonnaci
-    param:    positive integer, the Fibonnaci number to calculate
-    return:   the nth Fibonnaci number
-    '''
+    """
+        function: fib, an iterative solution for calculating the nth Fibonnaci
+        param:    positive integer, the Fibonnaci number to calculate
+        return:   the nth Fibonnaci number
+    """
     if n == 0:
         result = 0
     elif n == 1:
@@ -41,11 +41,11 @@ def fib(n):
 
 
 def r_fib(n):
-    '''
-    function: r_fib, a recursive solution for calculating the nth Fibonnaci
-    param:    positive integer, the Fibonnaci number to calculate
-    return:   the nth Fibonnaci number
-    '''
+    """
+        function: r_fib, a recursive solution for calculating the nth Fibonnaci
+        param:    positive integer, the Fibonnaci number to calculate
+        return:   the nth Fibonnaci number
+    """
     if n == 0:
         result = 0
     elif n == 1:
@@ -53,3 +53,6 @@ def r_fib(n):
     else:
         result = r_fib(n - 2) + r_fib(n - 1)
     return result
+
+# Simple code is not always the best code
+
