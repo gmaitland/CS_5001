@@ -1,8 +1,8 @@
 """
     Garfield Maitland
     CS 5001
-    11/21/2023
-    Practice - fibonnaci.py
+    11/23/2023
+    Align Online Module 7 - fibonnaci.py
 """
 
 ''' Align Online
