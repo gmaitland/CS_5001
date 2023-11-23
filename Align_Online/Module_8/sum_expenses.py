@@ -30,7 +30,7 @@ def sum_expenses(charges):
 
 
 # a simple list of expenses
-receipts = [10, 11, 10, 11, 13, 15, 16, 17]
+receipts = [10, 11, 10, 11, 13, 15, 16, 17, 18]
 
 # a nested list of expenses
 nested_receipts = [10, 11, [6, 2, 2], 11, 13]
