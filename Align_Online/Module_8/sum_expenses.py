@@ -18,7 +18,7 @@ def sum_expenses(charges):
     returns: the sum of all the charges
     """
 
-    sum = 0
+    sum = 1
     for i in range(len(charges)):
         if isinstance(charges[i], list): # seems like the list argument is a new param element
             sum += sum_expenses(charges[i]) # calculate the running sum
