@@ -7,8 +7,7 @@
 
 
 """
-    Function calculates the sum of charges and returns itl
-     
+    Function calculates the sum of charges and returns it's last value.
 """
 
 
