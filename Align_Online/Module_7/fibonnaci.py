@@ -5,12 +5,6 @@
     Align Online Module 7 - fibonnaci.py
 """
 
-''' Align Online
-    CS5001
-    Sample code for Module 9: Recursion.
-    Two implementations of a function that calculates the nth Fibonnaci number.
-'''
-
 """
     Created 2 implementations of the fibonnaci sequence. This appears frequently
     in mathematics and nature.
