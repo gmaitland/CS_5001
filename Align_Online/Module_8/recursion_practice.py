@@ -1,7 +1,7 @@
 """
     Garfield Maitland
     CS 5001
-    11/24/2023
+    11/23/2023
     Practice - recursion_practice.py
 """
 
@@ -31,6 +31,7 @@ def main():
     print(mystery(77))
     print(mystery(100))
     print(mystery(7))
+    print(mystery(12))
 
 
 if __name__ == "__main__":
