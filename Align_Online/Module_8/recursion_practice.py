@@ -21,6 +21,7 @@ def mystery(n):
 
 def main():
     print(mystery(10))
+    print(mystery(15))
 
 if __name__ == "__main__":
     main()
