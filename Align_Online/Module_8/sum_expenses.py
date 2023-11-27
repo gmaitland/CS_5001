@@ -25,6 +25,7 @@ def sum_expenses(charges):
         else:
             sum += charges[i]
         print("DEBUG: i =", i, ", sum =", sum)
+        print("Sum has been calculated")
     return sum
 
 
