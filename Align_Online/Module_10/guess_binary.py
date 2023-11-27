@@ -17,22 +17,22 @@
 
 
 class Guessing_game:
-    ''' Class that represents a random guessing game. '''
+    """ Class that represents a random guessing game. """
 
     def __init__(self, num_range):
         # the lowest number in the range starts at 1
         self.lowest = 1
-        # the highst number in the range
+        # the highest number in the range
         self.highest = num_range
 
     def next_guess(self, dir):
-        '''
+        """
         Method: next_guess -- guess the next number
         Parameter:
            self -- the current object
            dir -- the direction the next guess should be
         Returns the next guess to make
-        '''
+        """
         if dir == "l":
             # update the upper bound since the guess was lower
             self.highest = self.prev_guess - 1
