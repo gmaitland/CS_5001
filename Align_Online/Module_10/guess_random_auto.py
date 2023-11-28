@@ -50,9 +50,9 @@ class Guessing_game:
 
 
 def main():
-    '''
+    """
     Function: main -- the driver program
-    '''
+    """
     # instantiates the guessing game class
     game = Guessing_game(100)
     # keep track of how many guesses have been made
