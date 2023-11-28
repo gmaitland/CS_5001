@@ -1,0 +1,12 @@
+"""
+    Garfield Maitland
+    CS 5001
+    11/27/2023
+    Final Project - to_do_list.txt
+"""
+
+1. Write docstrings for all classes and functions (1 hour)
+
+2. Write 3 paragraphs for the design.txt file (1 hour)
+
+3. Review your code for typos (1 hour)s

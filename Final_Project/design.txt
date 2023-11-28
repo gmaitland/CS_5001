@@ -1,0 +1,8 @@
+"""
+    Garfield Maitland
+    CS 5001
+    11/27/2023
+    Final Project - design.txt
+"""
+
+# (short plaintext file – 2 or 3 paragraphs – explaining your design)

@@ -1,0 +1,17 @@
+
+------
+Milestone 1:  Get a Text version working first. Goal: Implement the fundamentals for basic game without worrying about the graphics yet. Develop the functionality to generate a randomized “secret code” and the ability to test user input via count_bulls_and_cows(). Don’t spend a lot of time with an elegant textual interface; you just want to get the core of the “game model” working so you can use it later.
+------
+Milestone 2: Develop Gameboard: Write the code to create the entire game board: The play area, status area & leader board. Validate the code works with “dummy” data. 
+-----
+Milestone 3: Marble placement & behavior: Write the code to manage proper Marble placement for the game AND the Marble “Guess Panel” (at the bottom of the screen where the user selects the colors they want). If you’re using our included Marble code, you’ll likely want to spend a little time examining that code and seeing how to use it. Check your layout algorithm to make sure it works for placing each User Guess in the correct spot. Implement code to handle mouse clicks & selecting Marbles appropriately.
+-----
+Milestone 4: Game behavior: Write the code to implement the game rules. Generate the secret code. Accept clicks on Marbles to guess positions. React appropriately to the Reset button (to cancel current color selections) and Quit button to exit the game.
+-----
+Milestone 5: Leaderboard: Write the code to implement saving/retrieving and showing real contents of the leader board. Continue to test.
+------
+Milestone 6: Clean up: Refactor any code needed to handle issues with rendering.  Clean up code, continue to test.
+------
+Milestone 7: Error logger: Write the code to log errors to mastermind_errors.err. Clean up code, continue to test.
+--------
+Milestone 8: Write design.txt: Write your design description. Do your final testing and any extra optional work (e.g. skinning your game). Wrap up any other outstanding task.

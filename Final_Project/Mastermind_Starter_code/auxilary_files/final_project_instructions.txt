@@ -1,0 +1,56 @@
+Final project instructions:
+
+1. **Deadline and Submission**: 
+   - Due: November 30, 2023, by 11:59 pm ET.
+   - Consists of both programming and written design description components.
+
+2. **Important Notes**:
+   - The project centers on creating a version of the MasterMind game.
+
+3. **Game Overview - MasterMind**: 
+   - A code-breaking game with a "secret code" of 4 colors selected from 6 options.
+   - Players guess the color combination and learn how many guesses are correct in color and position.
+   - The project's version is a one-player game where the program sets the code and scoring pegs.
+
+4. **Project Specifications**:
+   - Use Python's Turtle library for the user interface; no external graphic libraries are allowed.
+   - Functionalities required include a leaderboard, quit button, guess buttons, and error messages.
+   - Code should be well-documented and readable.
+
+5. **Resources and Guidance**:
+   - Emphasizes reliance on the Turtle graphic library.
+
+6. **Gameplay and UI Requirements**:
+   - Input player name via pop-up window.
+   - Draw a board with a leaderboard, quit button, colored guess buttons, check and cancel buttons, and display for current and previous guesses.
+   - Scoring pegs for correct color and position, and just color.
+   - Save best scores in a leaderboard file; display error messages for file issues.
+   - All interactions through the Turtle-based UI, using the mouse.
+
+7. **Testing and Documentation**:
+   - Include a test file to assess correct answers for the game.
+   - Document the design and testing in a plaintext file.
+   - Error logging functionality should be self-written.
+
+8. **Submission Requirements**:
+   - Essential files: `mastermind_game.py`, `test_mastermind_game.py`, `design.txt`.
+   - Include additional required files, including GIFs and starter code.
+   - Ensure the game runs in IDLE environment.
+Your files to turn in:
+
+mastermind_game.py (includes a main() function that lets us play your game)
+test_mastermind_game.py (tests for game functions, does not test turtle/view)
+design.txt (short plaintext file – 2 or 3 paragraphs – explaining your design)
+You may turn in other files with helper functions, but these above files are the minimum required. 
+You are free to select your approach to this problem! The code may be written as classes and objects or procedurally.
+
+Include any and all files required for playing your game, including gifs (either ones we provided for you or custom ones that you created) and any starter code you used, whether you modified it or not.
+
+9. **Evaluation Criteria**:
+   - Functionality, code correctness, documentation, UI aesthetics, and overall design will be assessed.
+   - Efficiency, readability, and user experience are important.:
+   - A detailed work plan and milestones provided for guidance.
+
+10. **Starter Code and Assets**:
+    - Starter code includes `Point.py`, `Marble.py`, and various `.gif` files for the UI.
+    - Starter code is optional and can be modified or not used at all.
