@@ -5,11 +5,7 @@
     Align Online Module 10 - guess_bounded.py
 """
 
-''' Align Online CS5001
-    Module 14 -- Efficiency
-    Sample code -- implementation of a guessing game that is smarter because
-    it keeps keeps track of the high and low guesses and guesses between them
-'''
+
 import random
 
 
