@@ -126,6 +126,7 @@ def main():
                 print(f"You are mixing the song: {loaded[1]}")
             else:
                 print("Invalid selection!")
+                print("Ok")
 
         elif choice == 'T':
             if current_song:
