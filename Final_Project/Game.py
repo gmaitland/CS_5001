@@ -9,7 +9,35 @@ from random import randint
 
 
 class MasterMind:
+    """
+        class: MasterMind
+            Is the main class that holds the constructor and the
+            essential functions for the game MasterMind.
+
+        Parameters:
+            None
+
+        Returns:
+            None
+
+        Defense:
+            None
+    """
     def __init__(self):
+        """
+            Function: __init__()
+                Constructor for the
+
+            Parameters:
+                song (type: str)
+                old_word (type: str)
+
+            Returns:
+                bool
+
+            Defense:
+                None
+        """
         self.colors = ["red", "blue", "green", "yellow", "purple", "black"]
         self.guess_length = 4
         self.guess_limit = 10
@@ -20,6 +48,19 @@ class MasterMind:
         self.secret_code = self.generate_code()
 
     def generate_code(self):
+        """
+            Function: generate_code()
+                Creates the secret code for the game
+
+            Parameters:
+                self (type: int)
+
+            Returns:
+                array
+
+            Defense:
+                None
+        """
         color = self.colors.copy()
         secret_code = []
         for i in range(self.guess_length):
@@ -28,6 +69,20 @@ class MasterMind:
 
     # Check if the guess is valid
     def validate_guess(self, guess: list):
+        """
+            Function: validate()
+                Checks the value of the secret code
+
+            Parameters:
+                self (type: str)
+                guess (type: str)
+
+            Returns:
+                bool
+
+            Defense:
+                None
+        """
         # check guess length
         if len(guess) != self.guess_length:
             raise ValueError("Guess must be of length " + str(self.guess_length))
@@ -41,6 +96,20 @@ class MasterMind:
         return True
 
     def feedback(self, guess):
+        """
+            Function: feedback()
+                Replaces the old word with the new word in the song.
+
+            Parameters:
+                self (type: str)
+                guess (type: str)
+
+            Returns:
+                bool
+
+            Defense:
+                None
+            """
         cows = 0
         bulls = 0
         for i in range(self.guess_length):
@@ -53,6 +122,20 @@ class MasterMind:
         return {"Bulls": bulls, "Cows": cows}
 
     def add_guess(self, guess):
+        """
+            Function: add_guess()
+                Appends the value of the guess to the array
+
+            Parameters:
+                self (type: str)
+                guess (type: str)
+
+            Returns:
+                score (type: str)
+
+            Defense:
+                None
+            """
         self.validate_guess(guess)
         if self.game_state == "playing":
             score = self.feedback(guess)
@@ -66,6 +149,19 @@ class MasterMind:
             return score
 
     def get_game_state(self):
+        """
+            Function: get_game_state()
+                Returns teh current state of the game
+
+            Parameters:
+                self (type: str)
+
+            Returns:
+                self.game_state (type: str)
+
+            Defense:
+                None
+            """
         return self.game_state
 
     def get_secret_code(self):
