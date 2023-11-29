@@ -7,6 +7,7 @@
 
 from music import PLAYLIST, SONGS
 
+
 def substitute(song: list, old_word: str, new_word: str) -> bool:
     """
     Function: substitute()

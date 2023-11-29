@@ -6,7 +6,21 @@
 """
 
 1. Write docstrings for all classes and functions (1 hour)
+    """
+    Function: substitute()
+        Replaces the old word with the new word in the song.
+
+    Parameters:
+        song (type: str)
+        old_word (type: str)
+
+    Returns:
+        bool
+
+    Defense:
+        None
+    """
 
 2. Write 3 paragraphs for the design.txt file (1 hour)
 
-3. Review your code for typos (1 hour)s
+3. Review your code for typos (1 hour)

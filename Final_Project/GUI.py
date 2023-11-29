@@ -18,7 +18,38 @@ HEIGHT = 800 + offset
 
 
 class Board:
+    """
+        Class: Board
+            Is the class for the GUI Board
+
+        Parameters:
+            None
+
+        Returns:
+            None
+
+        Defense:
+            None
+    """
     def __init__(self, position, width, height, game: MasterMind, leaderboard) -> None:
+        """
+            Function: __init__()
+                Is the constructor for the GUI Board
+
+            Parameters:
+                self (type: str)
+                position (type: str)
+                width (type: )
+                height (type: )
+                game (type: class)
+                leaderboard (type: )
+
+            Returns:
+                None
+
+            Defense:
+                None
+        """
         self.colors = game.colors
         self.game = game
         self.position = position
@@ -41,9 +72,36 @@ class Board:
         self.turtle.speed(0)  # set to fastest drawing
 
     def draw_guess(self):
+        """
+            Function: draw_guess()
+                Replaces the old word with the new word in the song.
+
+            Parameters:
+                self (type: str)
+
+            Returns:
+                None
+
+            Defense:
+                None
+        """
         self.turtle.goto(self.guess_marbles[0].position.x - 20, self.guess_marbles[0].position.y + MARBLE_RADIUS)
 
     def add_marble(self, color):
+        """
+            Function: substitute()
+                Replaces the old word with the new word in the song.
+
+            Parameters:
+                song (type: str)
+                old_word (type: str)
+
+            Returns:
+                bool
+
+            Defense:
+                None
+            """
         self.guess_marbles[self.current_guess * 4 + self.current_marble].set_color(color)
         self.guess_marbles[self.current_guess * 4 + self.current_marble].draw()
         self.current_marble += 1
