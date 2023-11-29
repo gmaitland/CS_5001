@@ -6,3 +6,5 @@
 """
 
 # (short plaintext file – 2 or 3 paragraphs – explaining your design)
+
+Still need to explain this prior to completely uploading the code
