@@ -33,22 +33,22 @@ class Board:
     """
     def __init__(self, position, width, height, game: MasterMind, leaderboard) -> None:
         """
-            Function: __init__()
-                Is the constructor for the GUI Board
+        Function: __init__()
+            Is the constructor for the GUI Board
 
-            Parameters:
-                self (type: str)
-                position (type: str)
-                width (type: )
-                height (type: )
-                game (type: class)
-                leaderboard (type: )
+        Parameters:
+            self (type: str)
+            position (type: str)
+            width (type: )
+            height (type: )
+            game (type: class)
+            leaderboard (type: )
 
-            Returns:
-                None
+        Returns:
+            None
 
-            Defense:
-                None
+        Defense:
+            None
         """
         self.colors = game.colors
         self.game = game
@@ -73,48 +73,73 @@ class Board:
 
     def draw_guess(self):
         """
-            Function: draw_guess()
-                Replaces the old word with the new word in the song.
+        Function: draw_guess()
+            Places the draw guess onto the program
 
-            Parameters:
-                self (type: str)
+        Parameters:
+            self (type: str)
 
-            Returns:
-                None
+        Returns:
+            None
 
-            Defense:
-                None
+        Defense:
+            None
         """
         self.turtle.goto(self.guess_marbles[0].position.x - 20, self.guess_marbles[0].position.y + MARBLE_RADIUS)
 
     def add_marble(self, color):
         """
-            Function: substitute()
-                Replaces the old word with the new word in the song.
+        Function: add_marble()
+            Adds the value of the marble and it's color to the user choice
 
-            Parameters:
-                song (type: str)
-                old_word (type: str)
+        Parameters:
+            self (type: str)
+            color (type: str)
 
-            Returns:
-                bool
+        Returns:
+            None
 
-            Defense:
-                None
-            """
+        Defense:
+            None
+        """
         self.guess_marbles[self.current_guess * 4 + self.current_marble].set_color(color)
         self.guess_marbles[self.current_guess * 4 + self.current_marble].draw()
         self.current_marble += 1
         self.guess_code.append(color)
 
     def clear_guess(self):
+        """
+        Function: clear_guess()
+            Clears the guess value from the user input
+
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         for i in range(self.current_guess * 4, self.current_guess * 4 + 4):
             self.guess_marbles[i].draw_empty()
         self.current_marble = 0
         self.guess_code = []
 
     def guess(self):
-        # self.turtle.goto(self.guess_marbles[self.current_guess*4].position.x-20,self.guess_marbles[0].position.y+MARBLE_RADIUS)
+        """
+        Function: guess()
+            Checks the value of the guess to determines the guess validity
+
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         if self.current_marble == 4:
             self.current_guess += 1
             self.current_marble = 0
@@ -131,11 +156,38 @@ class Board:
             return self.game.get_game_state()
 
     def won(self):
+        """
+        Function: won()
+            Determines if the user won the game and displays the winner.gif
+
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         self.leaderboard.add_score(self.game.guess_count)
         Popup("Images/winner.gif")
         turtle.ontimer(turtle.bye, 2000)
 
     def lost(self):
+        """
+        Function: lost()
+            Replaces the old word with the new word in the song.
+
+        Parameters:
+            self (type: str)
+            color (type: str)
+
+        Returns:
+            bool
+
+        Defense:
+            None
+        """
         Popup("Images/Lose.gif")
         turtle.ontimer(self.show_code, 2000)
 
