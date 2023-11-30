@@ -49,7 +49,7 @@ class Point:
             other
 
         Returns:
-            None
+            abs()
 
         Defense:
             None
@@ -66,7 +66,7 @@ class Point:
             other
 
         Returns:
-            None
+            abs()
 
         Defense:
             None
