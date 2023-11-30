@@ -5,7 +5,7 @@
     Final Project - mastermind_game.py
 """
 
-# from Game import MasterMind
+
 import turtle
 from GUI import *
 

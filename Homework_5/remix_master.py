@@ -19,6 +19,7 @@ def substitute(song: list, old_word: str, new_word: str) -> bool:
     Parameters:
         song (type: str)
         old_word (type: str)
+        new_word (type: str)
 
     Returns:
         bool
