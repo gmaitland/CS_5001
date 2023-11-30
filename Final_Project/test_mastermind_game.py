@@ -7,11 +7,24 @@
 
 from Game import MasterMind
 
-# test code
+
 Game = MasterMind()
 
 
 def test_secret_code():
+    """
+    Function: test_secret_code()
+        A function that tests the secret_code inputted into the program
+
+    Parameters:
+        None
+
+    Returns:
+        None
+
+    Defense:
+        None
+    """
     assert len(Game.secret_code) == 4
     assert len(set(Game.secret_code)) == 4
     for i in Game.secret_code:
@@ -19,10 +32,23 @@ def test_secret_code():
 
 
 def test_feedback():
-    Game.secret_code = ["red", "blue", "green","yellow"]
-    assert Game.feedback(["red","blue","green","yellow"]) == {"Bulls":4,"Cows":0}
-    assert Game.feedback(["red","black","green","yellow"]) == {"Bulls":3,"Cows":0}
-    assert Game.feedback(["blue","red","green","yellow"]) == {"Bulls":2,"Cows":2}
+    """
+    Function: test_feedback()
+        Records the secret_code and tests it against the equivalence values
+
+    Parameters:
+        None
+
+    Returns:
+        None
+
+    Defense:
+        None
+    """
+    Game.secret_code = ["red", "blue", "green", "yellow"]
+    assert Game.feedback(["red", "blue", "green", "yellow"]) == {"Bulls": 4, "Cows": 0}
+    assert Game.feedback(["red", "black", "green", "yellow"]) == {"Bulls": 3, "Cows": 0}
+    assert Game.feedback(["blue", "red", "green", "yellow"]) == {"Bulls": 2, "Cows": 2}
 
 
 if __name__ == "__main__":
