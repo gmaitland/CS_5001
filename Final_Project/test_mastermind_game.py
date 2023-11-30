@@ -49,6 +49,7 @@ def test_feedback():
     assert Game.feedback(["red", "blue", "green", "yellow"]) == {"Bulls": 4, "Cows": 0}
     assert Game.feedback(["red", "black", "green", "yellow"]) == {"Bulls": 3, "Cows": 0}
     assert Game.feedback(["blue", "red", "green", "yellow"]) == {"Bulls": 2, "Cows": 2}
+    assert Game.feedback(["blue", "red", "green", "yellow"]) == {"Bulls": 2, "Cows": 2}
 
 
 if __name__ == "__main__":

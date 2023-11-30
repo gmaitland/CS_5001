@@ -10,33 +10,32 @@ from random import randint
 
 class MasterMind:
     """
-        class: MasterMind
-            Is the main class that holds the constructor and the
-            essential functions for the game MasterMind.
+    class: MasterMind
+        Is the main class that holds the constructor and the
+        essential functions for the game MasterMind.
+
+    Parameters:
+        None
+
+    Returns:
+        None
+
+    Defense:
+        None
+    """
+    def __init__(self):
+        """
+        Function: __init__()
+            Is the constructor for the Mastermind Class
 
         Parameters:
-            None
+            self
 
         Returns:
             None
 
         Defense:
             None
-    """
-    def __init__(self):
-        """
-            Function: __init__()
-                Constructor for the
-
-            Parameters:
-                song (type: str)
-                old_word (type: str)
-
-            Returns:
-                bool
-
-            Defense:
-                None
         """
         self.colors = ["red", "blue", "green", "yellow", "purple", "black"]
         self.guess_length = 4
@@ -44,22 +43,21 @@ class MasterMind:
         self.guess_count = 0
         self.guesses = []
         self.game_state = "playing"
-        # generate secret code
         self.secret_code = self.generate_code()
 
     def generate_code(self):
         """
-            Function: generate_code()
-                Creates the secret code for the game
+        Function: generate_code()
+            Creates the secret code for the game
 
-            Parameters:
-                self (type: int)
+        Parameters:
+            self
 
-            Returns:
-                array
+        Returns:
+            secret_code
 
-            Defense:
-                None
+        Defense:
+            None
         """
         color = self.colors.copy()
         secret_code = []
@@ -67,21 +65,21 @@ class MasterMind:
             secret_code.append(color.pop(randint(0, 5 - i)))
         return secret_code
 
-    # Check if the guess is valid
+
     def validate_guess(self, guess: list):
         """
-            Function: validate()
-                Checks the value of the secret code
+        Function: validate()
+            Checks the value of the secret code
 
-            Parameters:
-                self (type: str)
-                guess (type: str)
+        Parameters:
+            self
+            guess
 
-            Returns:
-                bool
+        Returns:
+            bool
 
-            Defense:
-                None
+        Defense:
+            None
         """
         # check guess length
         if len(guess) != self.guess_length:
@@ -95,21 +93,22 @@ class MasterMind:
                 raise ValueError("Guess must be one of the following colors: " + str(self.colors))
         return True
 
+
     def feedback(self, guess):
         """
-            Function: feedback()
-                Replaces the old word with the new word in the song.
+        Function: feedback()
+            Replaces the old word with the new word in the song.
 
-            Parameters:
-                self (type: str)
-                guess (type: str)
+        Parameters:
+            self
+            guess
 
-            Returns:
-                bool
+        Returns:
+            bool
 
-            Defense:
-                None
-            """
+        Defense:
+            None
+        """
         cows = 0
         bulls = 0
         for i in range(self.guess_length):
@@ -121,21 +120,22 @@ class MasterMind:
         cows -= bulls
         return {"Bulls": bulls, "Cows": cows}
 
+
     def add_guess(self, guess):
         """
-            Function: add_guess()
-                Appends the value of the guess to the array
+        Function: add_guess()
+            Appends the value of the guess to the array
 
-            Parameters:
-                self (type: str)
-                guess (type: str)
+        Parameters:
+            self
+            guess
 
-            Returns:
-                score (type: str)
+        Returns:
+            score
 
-            Defense:
-                None
-            """
+        Defense:
+            None
+        """
         self.validate_guess(guess)
         if self.game_state == "playing":
             score = self.feedback(guess)
@@ -148,21 +148,35 @@ class MasterMind:
 
             return score
 
+
     def get_game_state(self):
         """
-            Function: get_game_state()
-                Returns teh current state of the game
+        Function: get_game_state()
+            Returns the current state of the game
 
-            Parameters:
-                self (type: str)
+        Parameters:
+            self
 
-            Returns:
-                self.game_state (type: str)
+        Returns:
+            self.game_state
 
-            Defense:
-                None
-            """
+        Defense:
+            None
+        """
         return self.game_state
 
     def get_secret_code(self):
+        """
+        Function: get_secret_code()
+            Returns the current secret code of the game
+
+        Parameters:
+            self
+
+        Returns:
+            secret_code
+
+        Defense:
+            None
+        """
         return self.secret_code
