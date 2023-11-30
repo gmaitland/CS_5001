@@ -89,7 +89,7 @@ def load_song(selection: int) -> list:
         checks if the user selection is a valid input.
 
     Parameters:
-        load_song(type: int)
+        load_song (type: int)
 
     Returns:
         list
