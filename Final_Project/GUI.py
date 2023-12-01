@@ -42,7 +42,7 @@ class Board:
             width (type: )
             height (type: )
             game (type: class)
-            leaderboard (type: )
+            leaderboard (type: file)
 
         Returns:
             None
@@ -69,7 +69,7 @@ class Board:
         self.turtle.shapesize(2.2)
         self.turtle.pencolor("red")
         self.turtle.pu()
-        self.turtle.speed(0)  # set to fastest drawing
+        self.turtle.speed(0)  # Set turle to the fastest drawing speed
 
     def draw_guess(self):
         """
@@ -129,7 +129,7 @@ class Board:
     def guess(self):
         """
         Function: guess()
-            Checks the value of the guess to determines the guess validity
+            Checks the value of the guess to determine the guess' validity
 
         Parameters:
             self (type: str)
@@ -180,10 +180,9 @@ class Board:
 
         Parameters:
             self (type: str)
-            color (type: str)
 
         Returns:
-            bool
+            None
 
         Defense:
             None
@@ -192,11 +191,39 @@ class Board:
         turtle.ontimer(self.show_code, 2000)
 
     def show_code(self):
+        """
+        Function: show_code()
+            Shows the secret code if the user loses the game
+
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         code = self.game.get_secret_code()
         turtle.textinput("Code", ' '.join(code))
         turtle.ontimer(turtle.bye, 500)
 
     def update_scoring_pegs(self, feedback):
+        """
+        Function: update_scoring_pegs()
+            Determines if the user's input is valid
+
+        Parameters:
+            self
+            feedback
+
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         bulls = feedback["Bulls"]
         cows = feedback["Cows"]
         a = 0
@@ -210,6 +237,19 @@ class Board:
             a += 1
 
     def draw(self) -> None:
+        """
+        Function: draw()
+            The function that draws the marble for the game's GUI
+
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         Frame(self.position, self.width, self.height)
         for row in range(0, 10):
             for column in range(0, 4):
@@ -230,7 +270,35 @@ class Board:
 
 
 class Leaderboard:
+    """
+    Class: Leaderboard
+        Is the class for the Leaderboard object
+
+    Parameters:
+        self (type: str)
+
+    Returns:
+        None
+
+    Defense:
+        None
+    """
     def __init__(self, position, width, height) -> None:
+        """
+        Function: __init__()
+            Is the constructor for the Leaderboard Class
+
+        Parameters:
+            self (type: str)
+            position
+            width
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         self.playername = turtle.textinput("Name", "Enter your name:")
         if self.playername == None or self.playername == "":
             self.playername = "Unknown"
@@ -242,12 +310,25 @@ class Leaderboard:
         self.turtle.speed(0)  # set to fastest drawing
         self.turtle.color("blue")
         self.turtle.up()
-
         self.leaders = []
         self.load_all_leaders()
         self.draw()
 
     def load_all_leaders(self):
+        """
+        Function: load_all_leaders()
+            Passes in the leaderboard.txt file, reads it
+            and displays to values of the file to the GUI
+
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         if os.path.exists("leaderboard.txt"):
             with open("leaderboard.txt", "r") as f:
                 lines = f.read().split("\n")
@@ -256,14 +337,26 @@ class Leaderboard:
                     _ = line.split(":")
                     if len(_) == 2:
                         self.leaders.append((_[0], _[1]))
-
-
         else:
             with open("leaderboard.txt", "w") as f:
                 f.write("")
         self.leaders = sorted(self.leaders, key=lambda x: int(x[0]))[:10]
 
     def add_score(self, guess_count):
+        """
+        Function: add_score()
+            Adds the score of each value and writes the value
+            to the leaderboard.txt file
+
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         self.leaders.append((guess_count, self.playername))
         self.leaders = sorted(self.leaders, key=lambda x: int(x[0]))[:10]
         with open("leaderboard.txt", "w") as f:
@@ -271,7 +364,20 @@ class Leaderboard:
                 f.write(str(leader[0]) + ":" + leader[1] + "\n")
 
     def draw(self) -> None:
+        """
+        Function: draw()
+            Draws the value of the text to the GUI in the appropriate
+            font, font style, font type, and color
 
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         Frame(self.position, self.width, self.height, "blue")
         self.turtle.goto(self.position.x + 10, self.position.y + self.height - 40)
         self.turtle.write("Leaders:", font=("Arial", 20, "normal"))
@@ -281,7 +387,38 @@ class Leaderboard:
 
 
 class User_Panel:
+    """
+    Class: User_Panel
+        Is the class that creates the objects of the User Panel
+
+    Parameters:
+        None
+
+    Returns:
+        None
+
+    Defense:
+        None
+    """
     def __init__(self, board, position, width, height, window) -> None:
+        """
+        Function: guess()
+            Is the constructor of the User_Panel Class
+
+        Parameters:
+            self (type: str)
+            board
+            position
+            width
+            height
+            window
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         self.board = board
         self.position = position
         self.width = width
