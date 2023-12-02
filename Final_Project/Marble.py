@@ -80,19 +80,6 @@ class Point:
 
 
 class Marble:
-    """
-    Class: Marble
-        Is the class for the attributes of the object Marble
-
-    Parameters:
-        None
-
-    Returns:
-        None
-
-    Defense:
-        None
-    """
     def __init__(self, position, color, size=MARBLE_RADIUS):
         """
         Function: __init__()

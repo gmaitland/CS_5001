@@ -69,7 +69,9 @@ class Board:
         self.turtle.shapesize(2.2)
         self.turtle.pencolor("red")
         self.turtle.pu()
-        self.turtle.speed(0)  # Set turle to the fastest drawing speed
+        self.turtle.speed(0)  # Set turtle to the fastest drawing speedf
+        # self.screen = turtle.Screen()
+        # self.screen.tracer(10)
 
     def draw_guess(self):
         """
@@ -313,6 +315,8 @@ class Leaderboard:
         self.leaders = []
         self.load_all_leaders()
         self.draw()
+        # self.screen = turtle.Screen()
+        # self.screen.tracer(10)
 
     def load_all_leaders(self):
         """
@@ -341,6 +345,8 @@ class Leaderboard:
             with open("leaderboard.txt", "w") as f:
                 f.write("")
         self.leaders = sorted(self.leaders, key=lambda x: int(x[0]))[:10]
+        # self.screen = turtle.Screen()
+        # self.screen.tracer(10)
 
     def add_score(self, guess_count):
         """
@@ -402,7 +408,7 @@ class User_Panel:
     """
     def __init__(self, board, position, width, height, window) -> None:
         """
-        Function: guess()
+        Function: __init__()
             Is the constructor of the User_Panel Class
 
         Parameters:
@@ -430,6 +436,19 @@ class User_Panel:
         self.draw()
 
     def enter_code(self):
+        """
+        Function: enter_code()
+            Checks the value of the guess to determines the guess validity
+
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         if self.window.screen_lock == False:
             self.window.screen_lock = True
             if len(self.disabled_colors) == 4:
@@ -441,6 +460,19 @@ class User_Panel:
             self.window.screen_lock = False
 
     def clear_code(self):
+        """
+        Function: clear_code()
+            Clears the current selected marbles from the user selection
+
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         if self.window.screen_lock == False:
             self.window.screen_lock = True
             self.board.clear_guess()
@@ -450,6 +482,19 @@ class User_Panel:
             self.window.screen_lock = False
 
     def quit(self):
+        """
+        Function: quit()
+            Quit and
+
+        Parameters:
+            self (type: str)
+
+        Returns:
+            None
+
+        Defense:
+            None
+        """
         if self.window.screen_lock == False:
             self.window.screen_lock = True
             Popup("Images/quitmsg.gif")

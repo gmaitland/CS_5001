@@ -5,7 +5,7 @@
     Final Project - to_do_list.txt
 """
 
-1. Write docstrings for all classes and functions (1 hour)
+1. Write docstrings for all classes and functions (5 hours)
     """
     Function: substitute()
         Replaces the old word with the new word in the song.
