@@ -47,6 +47,7 @@ def substitute(song: list, old_word: str, new_word: str) -> bool:
 
     song[:] = song_str.split("\n")
     return True
+    print("Done")
 
 
 def reverse_it(song: list) -> list:
