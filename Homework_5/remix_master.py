@@ -110,7 +110,7 @@ def load_song(selection: int) -> list:
 def main():
     current_song = []
     while True:
-        print("ReMix-Master:")
+        print("ReMix-Master:"
         print("L: Load a different song")
         print("T: Title of current song")
         print("S: Substitute a word")
