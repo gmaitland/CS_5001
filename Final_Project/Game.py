@@ -65,7 +65,6 @@ class MasterMind:
             secret_code.append(color.pop(randint(0, 5 - i)))
         return secret_code
 
-
     def validate_guess(self, guess: list):
         """
         Function: validate()
@@ -93,7 +92,6 @@ class MasterMind:
                 raise ValueError("Guess must be one of the following colors: " + str(self.colors))
         return True
 
-
     def feedback(self, guess):
         """
         Function: feedback()
@@ -119,7 +117,6 @@ class MasterMind:
                 cows += 1
         cows -= bulls
         return {"Bulls": bulls, "Cows": cows}
-
 
     def add_guess(self, guess):
         """
@@ -147,7 +144,6 @@ class MasterMind:
                 self.game_state = "lost"
 
             return score
-
 
     def get_game_state(self):
         """
