@@ -1,10 +1,15 @@
 """
     Garfield Maitland
     CS 5001
-    11/27/2023
+    11/30/2023
     Final Project - design.txt
 """
 
-# (short plaintext file – 2 or 3 paragraphs – explaining your design)
 
-Still need to explain this prior to completely uploading the code
+"""
+In analyzing my project, I adopted a thoughtful and well-structured design approach in creating the Mastermind-style game. I was intentional and each file I created was discrete, modular and served a specific purpose, contributing effectively to the overall architecture of the game. For instance, in `Game.py`, I encapsulated the core game mechanics, while in `GUI.py`, I focused solely on the user interface. This separation of concerns was deliberate and strategic. My files `Marble.py` and `Point.py` were designed to represent specific game elements, illustrating my modular approach to component design. The `mastermind_game.py` file, where I integrated these modules, was crucial in demonstrating my ability to orchestrate various components in a cohesive manner.
+
+Regarding implementation, I leveraged my proficiency in Python. I applied key concepts like object-oriented programming, particularly in files like `Marble.py` and `Point.py`, where I defined classes for distinct game elements. The development of the `GUI.py` file highlighted my skills in graphical user interface development, which is vital for interactive applications. In `Game.py` and `mastermind_game.py`, I managed the game's logic and flow, reflecting my capability to handle complex logic and state management. The inclusion of `test_mastermind_game.py` was important to my understanding of the importance of testing in software development, ensuring the reliability and correctness of my game.
+
+From this project, I learned a great deal. First and foremost, I learned how to structure a software project into manageable and coherent modules. I demonstrated my ability to apply both foundational and advanced programming concepts, from designing classes to managing user interactions through a graphical interface. By including a testing module, I highlighted my appreciation for the software development lifecycle, emphasizing the role of testing in maintaining code quality. This project provided me with a comprehensive experience in full-stack development, encompassing both backend logic and frontend presentation, and ingrained in me the importance of testing and quality assurance in software development.
+"""
