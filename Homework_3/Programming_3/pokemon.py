@@ -82,7 +82,7 @@ def pokemon_game():
         Additionally, ask's the player to select a team.
         Uses a while loop to get a random integer to select between our
         pokemon choices inclusive of 1 to 9.
-        The asks the user to input an integer that represents the choices
+        Then asks the user to input an integer that represents the choices
         of 'rock', 'paper', or 'scissors'.
         Determines the winner and adds plus 1 to either the red team
         or the blue team.
