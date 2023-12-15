@@ -18,7 +18,7 @@ graphs = {
     # 'y': {'z': 20}
 }
 
-l
+lm
 class Node:
     def __init__(self):
         self.d = float('inf')
