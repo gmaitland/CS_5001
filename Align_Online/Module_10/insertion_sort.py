@@ -34,6 +34,7 @@ def main():
     my_list = [i for i in range(100)]
     random.shuffle(my_list)
     print(my_list)
+    print(my_list)
     sorted_list = insertion_sort(my_list)
     print(sorted_list)
 
