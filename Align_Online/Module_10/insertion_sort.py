@@ -19,7 +19,7 @@ def insertion_sort(things):
     sorted = list()
     for item in things:
         # find the correct position to insert this value
-        for i in range(len(sorted) + 2):
+        for i in range(len(sorted) + 1):
             if i == len(sorted) or item < sorted[i]:
                 # copies all the values to make room for the new one
                 sorted.insert(i, item)
