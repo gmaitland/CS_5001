@@ -41,3 +41,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"":
+def tech_goldrush():
+    print("New technology goldrush")
+    print("sell shovels")
+    print("ride the tech wave")
+
+tech_goldrush()
+
+"""
